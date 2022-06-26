@@ -23,7 +23,6 @@ const Main = styled.main`
 `;
 
 const Form = styled.form`
-  height: 80vh;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,18 @@ const Form = styled.form`
     justify-content: center;
     height: 400px;
     margin-left: 10px;
+  }
+`;
+const Section = styled.section`
+  border: 2px solid rgba(209, 209, 209, 0.567);
+  height: 75vh;
+  border-radius: 10px;
+
+  @media (min-width: 780px) {
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid rgba(209, 209, 209, 0.567);
   }
 `;
 
@@ -86,22 +97,21 @@ const Paragraph = styled.p`
   margin: 10px auto;
 `;
 
-const Section = styled.section`
-  border: 2px solid rgba(209, 209, 209, 0.567);
-  height: 75vh;
-  border-radius: 10px;
-
-  @media (min-width: 780px) {
-    height: auto;
-    display: flex;
-    border-radius: 10px;
-    border: 2px solid rgba(209, 209, 209, 0.567);
-  }
+const Errors = styled.p`
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Register = () => {
   const { signUp } = useAuth();
   const navigate = useNavigate();
+
+  const [errorEmail, seterrorEmail] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState("");
+  const [errorPass, setErrorPass] = useState("");
+  const [missingEmail, setMissingEmail] = useState("");
 
   const [user, setUser] = useState({
     email: "",
@@ -116,7 +126,30 @@ const Register = () => {
       await signUp(user.email, user.password);
       navigate("/");
     } catch (error) {
-      console.log(error.message);
+      console.log(error.code);
+
+      if (error.code === "auth/invalid-email") {
+        setInvalidEmail("El e-mail ingresado no es valido.");
+      } else {
+        setInvalidEmail("");
+      }
+
+      if (error.code === "auth/weak-password") {
+        setErrorPass("Mínimo 6 caracteres.");
+      } else {
+        setErrorPass("");
+      }
+      if (error.code === "auth/email-already-in-use") {
+        seterrorEmail("El e-mail ya esta en uso.");
+      } else {
+        seterrorEmail("");
+      }
+
+      if (error.code === "auth/missing-email") {
+        setMissingEmail("Por favor, ingresa un e-mail");
+      } else {
+        setMissingEmail("");
+      }
     }
   };
 
@@ -136,6 +169,9 @@ const Register = () => {
               placeholder="Ingresa tu Email"
               onChange={handleChnade}
             />
+            {errorEmail && <Errors>{errorEmail}</Errors>}
+            {invalidEmail && <Errors>{invalidEmail}</Errors>}
+            {missingEmail && <Errors>{missingEmail}</Errors>}
 
             <Label htmlFor="password">Contraseña</Label>
             <Input
@@ -144,6 +180,7 @@ const Register = () => {
               placeholder="Ingresa una contraseña"
               onChange={handleChnade}
             />
+            {errorPass && <Errors>{errorPass}</Errors>}
 
             <Buttom>Registrarme</Buttom>
           </Form>
