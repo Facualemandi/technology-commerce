@@ -15,9 +15,8 @@ const Main = styled.main`
   margin-top: 150px;
   height: 70vh;
   border-radius: 10px;
-  border: 1px solid rgba(209, 209, 209, 0.567);
 
-  @media (min-width: 900px) {
+  @media (min-width: 780px) {
     display: flex;
     flex-direction: row;
   }
@@ -29,12 +28,12 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 900px) {
-    width: 50vw;
+  @media (min-width: 780px) {
+    width: 40vw;
     display: flex;
     justify-content: center;
-    height: 250px;
-    border: 1px solid rgba(209, 209, 209, 0.567);
+    height: 400px;
+    margin-left: 10px;
   }
 `;
 
@@ -58,10 +57,10 @@ const Buttom = styled.button`
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
-  width: 90vw;
+  margin: 5px;
 
-  @media (min-width: 900px) {
-    width: 50vw;
+  @media (min-width: 780px) {
+    margin: 5px;
   }
 `;
 
@@ -71,10 +70,12 @@ const Img = styled.img`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
-  @media (min-width: 900px) {
+  @media (min-width: 780px) {
     border-top-right-radius: 0px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    height: 400px;
+    width: 40vw;
   }
 `;
 
@@ -83,6 +84,19 @@ const Paragraph = styled.p`
   font-size: 24px;
   font-weight: bold;
   margin: 10px auto;
+`;
+
+const Section = styled.section`
+  border: 2px solid rgba(209, 209, 209, 0.567);
+  height: 75vh;
+  border-radius: 10px;
+
+  @media (min-width: 780px) {
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid rgba(209, 209, 209, 0.567);
+  }
 `;
 
 const Register = () => {
@@ -109,29 +123,31 @@ const Register = () => {
   return (
     <>
       <Main>
-        <Img alt="Tecnología" src={imgRegister} />
+        <Section>
+          <Img alt="Tecnología" src={imgRegister} />
 
-        <Form onSubmit={handleSubmit}>
-          <Paragraph>Bienvenidos a Technology</Paragraph>
+          <Form onSubmit={handleSubmit}>
+            <Paragraph>Bienvenidos a Technology</Paragraph>
 
-          <Label htmlFor="email">email</Label>
-          <Input
-            type={"email"}
-            name="email"
-            placeholder="Ingresa tu Email"
-            onChange={handleChnade}
-          />
+            <Label htmlFor="email">email</Label>
+            <Input
+              type={"email"}
+              name="email"
+              placeholder="Ingresa tu Email"
+              onChange={handleChnade}
+            />
 
-          <Label htmlFor="password">Contraseña</Label>
-          <Input
-            type={"password"}
-            name="password"
-            placeholder="Ingresa una contraseña"
-            onChange={handleChnade}
-          />
+            <Label htmlFor="password">Contraseña</Label>
+            <Input
+              type={"password"}
+              name="password"
+              placeholder="Ingresa una contraseña"
+              onChange={handleChnade}
+            />
 
-          <Buttom>Registrarme</Buttom>
-        </Form>
+            <Buttom>Registrarme</Buttom>
+          </Form>
+        </Section>
       </Main>
     </>
   );
