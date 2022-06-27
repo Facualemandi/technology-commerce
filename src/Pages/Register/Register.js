@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/authContext";
 import imgRegister from "../../Images/Register.png";
 
@@ -66,12 +66,18 @@ const Buttom = styled.button`
   background-color: #77c1f9;
   border: none;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   color: white;
   margin: 5px;
 
   @media (min-width: 780px) {
     margin: 5px;
+
+    &&:hover{
+      background-color: #e8fffa;
+      box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
+      color: black;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -103,6 +109,28 @@ const Errors = styled.p`
   margin-left: 5px;
   font-family: "Roboto", sans-serif;
 `;
+
+const Return = styled(NavLink)`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-left: 5px;
+   font-family: "Montserrat", sans-serif;
+   padding: 5px;
+   border-radius: 5px;
+   border: 1px solid black;
+   margin-top: 15px;
+   text-decoration: none;
+   color: black;
+
+   &&:hover{
+    background-color: #e8fffa;
+      box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
+      color: black;
+   }
+
+`
 
 const Register = () => {
   const { signUp } = useAuth();
@@ -184,9 +212,12 @@ const Register = () => {
             {errorPass && <Errors>{errorPass}</Errors>}
 
             <Buttom>Registrarme</Buttom>
+
+              <Return to={'/'}>Volver</Return>
           </Form>
         </Section>
       </Main>
+      
     </>
   );
 };

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/authContext";
 import imgRegister from "../../Images/Register.png";
 import { FcGoogle } from "react-icons/fc";
-
 
 import styled from "styled-components";
 
@@ -70,12 +69,18 @@ const Buttom = styled.button`
   font-family: "Montserrat", sans-serif;
   color: white;
   margin: 5px;
-  background-color:${props => props.bg};
-  color: ${({color}) => color};
-  border: ${({border}) => border};
+  background-color: ${(props) => props.bg};
+  color: ${({ color }) => color};
+  border: ${({ border }) => border};
+  cursor: pointer;
 
   @media (min-width: 780px) {
     margin: 5px;
+    &&:hover{
+      background-color: #e8fffa;
+      box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
+      color: black;
+    }
   }
 `;
 
@@ -108,6 +113,27 @@ const Errors = styled.p`
   font-family: "Roboto", sans-serif;
 `;
 
+const NoAccounts = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+`;
+
+const StyleLink = styled(NavLink)`
+  margin-left: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  
+  &&:hover{
+    border-bottom: 1px solid black;
+  }
+`;
+
 const Register = () => {
   const { login, logInWithGoogle } = useAuth();
   const navigate = useNavigate();
@@ -127,7 +153,7 @@ const Register = () => {
 
   const handleGoogleSign = async () => {
     await logInWithGoogle();
-    navigate('/')
+    navigate("/");
   };
 
   const handleSubmit = async (e) => {
@@ -193,7 +219,17 @@ const Register = () => {
             {errorPass && <Errors>{errorPass}</Errors>}
 
             <Buttom>Ingresar</Buttom>
-            <Buttom border='1px solid rgba(209, 209, 209, 0.567)' bg='white' color="black" onClick={handleGoogleSign}>Ingresar Con Google <FcGoogle/> </Buttom>
+            <Buttom
+              border="1px solid rgba(209, 209, 209, 0.567)"
+              bg="white"
+              color="black"
+              onClick={handleGoogleSign}
+            >
+              Ingresar Con Google <FcGoogle />{" "}
+            </Buttom>
+            <NoAccounts>
+              No tienes cuenta? <StyleLink to={"/Register"}>Registrarse</StyleLink>
+            </NoAccounts>
           </Form>
         </Section>
       </Main>
