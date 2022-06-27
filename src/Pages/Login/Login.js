@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/authContext";
 import imgRegister from "../../Images/Register.png";
+import { FcGoogle } from "react-icons/fc";
+
 
 import styled from "styled-components";
 
@@ -36,7 +38,7 @@ const Form = styled.form`
   }
 `;
 const Section = styled.section`
-  border: 2px solid rgba(209, 209, 209, 0.567);
+  border: 1px solid rgba(209, 209, 209, 0.567);
   height: 75vh;
   border-radius: 10px;
 
@@ -56,7 +58,7 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
-  font-family: "Roboto", sans-serif;
+  font-family: "Monserrat", sans-serif;
   margin: 5px;
 `;
 
@@ -66,9 +68,11 @@ const Buttom = styled.button`
   background-color: #77c1f9;
   border: none;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   color: white;
   margin: 5px;
+  background-color:${props => props.bg};
+  color: ${({color}) => color};
+  border: ${({border}) => border};
 
   @media (min-width: 780px) {
     margin: 5px;
@@ -105,7 +109,7 @@ const Errors = styled.p`
 `;
 
 const Register = () => {
-  const { login } = useAuth();
+  const { login, logInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   const [invalidEmail, setInvalidEmail] = useState("");
@@ -120,6 +124,12 @@ const Register = () => {
   const handleChnade = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
   };
+
+  const handleGoogleSign = async () => {
+    await logInWithGoogle();
+    navigate('/')
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -183,6 +193,7 @@ const Register = () => {
             {errorPass && <Errors>{errorPass}</Errors>}
 
             <Buttom>Ingresar</Buttom>
+            <Buttom border='1px solid rgba(209, 209, 209, 0.567)' bg='white' color="black" onClick={handleGoogleSign}>Ingresar Con Google <FcGoogle/> </Buttom>
           </Form>
         </Section>
       </Main>

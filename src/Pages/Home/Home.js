@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/authContext";
 
 const Home = () => {
   const { user, logAut } = useAuth();
+  
 
  const isLogAuth =  useNavigate()
 
@@ -13,7 +14,6 @@ const Home = () => {
   }
 
 
-  if(user && <p>hola</p>)
 
   return (
     <>
