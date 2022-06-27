@@ -10,7 +10,7 @@ const Home = () => {
 
   const handleLogOut = async () => {
     await logAut();
-    isLogAuth('/Login')
+    isLogAuth('/')
   }
 
 

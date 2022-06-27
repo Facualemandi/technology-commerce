@@ -150,7 +150,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await signUp(user.email, user.password);
-      navigate("/");
+      navigate("/Home");
     } catch (error) {
       console.log(error.code);
 

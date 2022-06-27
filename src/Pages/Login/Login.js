@@ -120,6 +120,7 @@ const NoAccounts = styled.p`
   margin-top: 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  margin-bottom: 10px;
 `;
 
 const StyleLink = styled(NavLink)`
@@ -153,14 +154,14 @@ const Register = () => {
 
   const handleGoogleSign = async () => {
     await logInWithGoogle();
-    navigate("/");
+    navigate("/Home");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await login(user.email, user.password);
-      navigate("/");
+      navigate("/Home");
     } catch (error) {
       console.log(error.code);
 
