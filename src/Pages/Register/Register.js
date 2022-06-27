@@ -108,10 +108,8 @@ const Register = () => {
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
-  const [errorEmail, seterrorEmail] = useState("");
   const [invalidEmail, setInvalidEmail] = useState("");
   const [errorPass, setErrorPass] = useState("");
-  const [missingEmail, setMissingEmail] = useState("");
 
   const [user, setUser] = useState({
     email: "",
@@ -130,6 +128,22 @@ const Register = () => {
 
       if (error.code === "auth/invalid-email") {
         setInvalidEmail("El e-mail ingresado no es valido.");
+        setErrorPass("");
+        return;
+      } else {
+        setInvalidEmail("");
+      }
+      if (error.code === "auth/email-already-in-use") {
+        setInvalidEmail("El e-mail ya esta en uso.");
+        setErrorPass("");
+        return;
+      } else {
+        setInvalidEmail("");
+      }
+      if (error.code === "auth/missing-email") {
+        setInvalidEmail("Por favor, ingresa un e-mail");
+        setErrorPass("");
+        return;
       } else {
         setInvalidEmail("");
       }
@@ -138,17 +152,6 @@ const Register = () => {
         setErrorPass("Mínimo 6 caracteres.");
       } else {
         setErrorPass("");
-      }
-      if (error.code === "auth/email-already-in-use") {
-        seterrorEmail("El e-mail ya esta en uso.");
-      } else {
-        seterrorEmail("");
-      }
-
-      if (error.code === "auth/missing-email") {
-        setMissingEmail("Por favor, ingresa un e-mail");
-      } else {
-        setMissingEmail("");
       }
     }
   };
@@ -169,9 +172,7 @@ const Register = () => {
               placeholder="Ingresa tu Email"
               onChange={handleChnade}
             />
-            {errorEmail && <Errors>{errorEmail}</Errors>}
             {invalidEmail && <Errors>{invalidEmail}</Errors>}
-            {missingEmail && <Errors>{missingEmail}</Errors>}
 
             <Label htmlFor="password">Contraseña</Label>
             <Input
