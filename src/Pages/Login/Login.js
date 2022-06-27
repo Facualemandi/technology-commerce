@@ -110,6 +110,7 @@ const Register = () => {
 
   const [invalidEmail, setInvalidEmail] = useState("");
   const [errorPass, setErrorPass] = useState("");
+  const [notUser, setNotUser] = useState("");
 
   const [user, setUser] = useState({
     email: "",
@@ -147,6 +148,9 @@ const Register = () => {
       } else {
         setErrorPass("");
       }
+      if (error.code === "auth/user-not-found") {
+        setNotUser("El usuario no existe");
+      }
     }
   };
 
@@ -158,6 +162,7 @@ const Register = () => {
 
           <Form onSubmit={handleSubmit}>
             <Paragraph>Bienvenidos a Technology</Paragraph>
+            {notUser && <Errors>{notUser}</Errors>}
 
             <Label htmlFor="email">email</Label>
             <Input
