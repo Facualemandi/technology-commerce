@@ -29,8 +29,7 @@ export const StyleLogin = () => {
       width: 40vw;
       display: flex;
       justify-content: center;
-      height: 400px;
-      margin-left: 10px;
+      height: 300px;
     }
   `;
   const Section = styled.section`
@@ -51,6 +50,7 @@ export const StyleLogin = () => {
     border: 1px solid #ebebeb;
     margin: 5px;
     padding: 10px;
+    width: 95%;
   `;
 
   const Label = styled.label`
@@ -61,22 +61,22 @@ export const StyleLogin = () => {
   const Buttom = styled.button`
     padding: 10px;
     border-radius: 5px;
-    background-color: #77c1f9;
+    background-color: #badcfb;
     border: none;
     font-family: "Montserrat", sans-serif;
-    color: white;
     margin: 5px;
-    background-color: ${(props) => props.bg};
     color: ${({ color }) => color};
     border: ${({ border }) => border};
     cursor: pointer;
+    transition: 0.5s;
 
     @media (min-width: 780px) {
       margin: 5px;
+
       &&:hover {
-        background-color: #e8fffa;
+        background-color: #a7cff5;
         box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
-        color: black;
+        transition: 0.5s;
       }
     }
   `;
@@ -131,6 +131,14 @@ export const StyleLogin = () => {
       border-bottom: 1px solid black;
     }
   `;
+
+  const SectionDesktop = styled.section`
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10px;
+  `;
+
   return {
     Main,
     Form,
@@ -143,5 +151,6 @@ export const StyleLogin = () => {
     Errors,
     NoAccounts,
     StyleLink,
+    SectionDesktop,
   };
 };

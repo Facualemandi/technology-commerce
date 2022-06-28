@@ -54,6 +54,7 @@ export const useLogin = () => {
       };
 
       const handleGoogleSign = async () => {
+        setInvalidEmail('')
         await logInWithGoogle();
         navigate("/Home");
       };

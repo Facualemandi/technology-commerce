@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import imgRegister from "../../Images/Register.png";
 import { FcGoogle } from "react-icons/fc";
-import styled from "styled-components";
 import { useLogin } from "../../Hooks/useLogin";
 import { StyleLogin } from "../../Styles/StyleLogin";
-
 
 const {
   Main,
@@ -19,10 +17,10 @@ const {
   Errors,
   NoAccounts,
   StyleLink,
-} = StyleLogin()
+  SectionDesktop,
+} = StyleLogin();
 
 const Register = () => {
-
   const {
     invalidEmail,
     errorPass,
@@ -38,34 +36,37 @@ const Register = () => {
         <Section>
           <Img alt="Tecnología" src={imgRegister} />
 
-          <Form onSubmit={handleSubmit}>
-            <Paragraph>Bienvenidos a Technology</Paragraph>
-            {notUser && <Errors>{notUser}</Errors>}
+          <SectionDesktop>
+            <Form onSubmit={handleSubmit}>
+              <Paragraph>Bienvenidos a Technology</Paragraph>
+              {notUser && <Errors>{notUser}</Errors>}
 
-            <Label htmlFor="email">email</Label>
-            <Input
-              type={"email"}
-              name="email"
-              placeholder="Ingresa tu Email"
-              onChange={handleChnade}
-            />
-            {invalidEmail && <Errors>{invalidEmail}</Errors>}
+              <Label htmlFor="email">email</Label>
+              <Input
+                type={"email"}
+                name="email"
+                placeholder="Ingresa tu Email"
+                onChange={handleChnade}
+              />
+              {invalidEmail && <Errors>{invalidEmail}</Errors>}
 
-            <Label htmlFor="password">Contraseña</Label>
-            <Input
-              type={"password"}
-              name="password"
-              placeholder="Ingresa una contraseña"
-              onChange={handleChnade}
-            />
-            {errorPass && <Errors>{errorPass}</Errors>}
+              <Label htmlFor="password">Contraseña</Label>
+              <Input
+                type={"password"}
+                name="password"
+                placeholder="Ingresa una contraseña"
+                onChange={handleChnade}
+              />
+              {errorPass && <Errors>{errorPass}</Errors>}
 
-            <Buttom>Ingresar</Buttom>
+              <Buttom>Ingresar</Buttom>
+            </Form>
             <Buttom
               border="1px solid rgba(209, 209, 209, 0.567)"
               bg="white"
               color="black"
               onClick={handleGoogleSign}
+              hover='white'
             >
               Ingresar Con Google <FcGoogle />{" "}
             </Buttom>
@@ -73,7 +74,7 @@ const Register = () => {
               No tienes cuenta?{" "}
               <StyleLink to={"/Register"}>Registrarse</StyleLink>
             </NoAccounts>
-          </Form>
+          </SectionDesktop>
         </Section>
       </Main>
     </>
