@@ -53,6 +53,7 @@ const Input = styled.input`
   border: 1px solid #ebebeb;
   margin: 5px;
   padding: 10px;
+  width: 95%;
 `;
 
 const Label = styled.label`
@@ -63,20 +64,21 @@ const Label = styled.label`
 const Buttom = styled.button`
   padding: 10px;
   border-radius: 5px;
-  background-color: #77c1f9;
   border: none;
   font-family: "Montserrat", sans-serif;
-  color: white;
   margin: 5px;
+  background-color: #badcfb;
+  color: black;
+  width: 95%;
 
   @media (min-width: 780px) {
     margin: 5px;
 
-    &&:hover{
-      background-color: #e8fffa;
+    &&:hover {
+      background-color: #a7cff5;
       box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
-      color: black;
       cursor: pointer;
+      transition: 0.5s;
     }
   }
 `;
@@ -111,26 +113,27 @@ const Errors = styled.p`
 `;
 
 const Return = styled(NavLink)`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   margin-left: 5px;
-   font-family: "Montserrat", sans-serif;
-   padding: 5px;
-   border-radius: 5px;
-   border: 1px solid black;
-   margin-top: 15px;
-   text-decoration: none;
-   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(176, 176, 176, 0.55);
+  margin-top: 15px;
+  text-decoration: none;
+  color: black;
+  width: 95%;
 
-   &&:hover{
-    background-color: #e8fffa;
-      box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
-      color: black;
-   }
-
-`
+  &&:hover {
+    box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
+    color: black;
+    background-color: #eff6fc;
+    transition: 0.3s;
+  }
+`;
 
 const Register = () => {
   const { signUp } = useAuth();
@@ -213,11 +216,10 @@ const Register = () => {
 
             <Buttom>Registrarme</Buttom>
 
-              <Return to={'/'}>Volver</Return>
+            <Return to={"/"}>Volver</Return>
           </Form>
         </Section>
       </Main>
-      
     </>
   );
 };
