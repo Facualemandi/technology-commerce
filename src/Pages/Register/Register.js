@@ -28,16 +28,17 @@ const Form = styled.form`
   flex-direction: column;
 
   @media (min-width: 780px) {
-    width: 40vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 300px;
     margin-left: 10px;
   }
 `;
+
 const Section = styled.section`
   border: 2px solid rgba(209, 209, 209, 0.567);
-  height: 75vh;
+  height: auto;
   border-radius: 10px;
 
   @media (min-width: 780px) {
@@ -53,7 +54,6 @@ const Input = styled.input`
   border: 1px solid #ebebeb;
   margin: 5px;
   padding: 10px;
-  width: 95%;
 `;
 
 const Label = styled.label`
@@ -69,7 +69,7 @@ const Buttom = styled.button`
   margin: 5px;
   background-color: #badcfb;
   color: black;
-  width: 95%;
+
 
   @media (min-width: 780px) {
     margin: 5px;
@@ -94,7 +94,7 @@ const Img = styled.img`
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 400px;
-    width: 40vw;
+    width: 30vw;
   }
 `;
 
@@ -103,6 +103,7 @@ const Paragraph = styled.p`
   font-size: 24px;
   font-weight: bold;
   margin: 10px auto;
+  margin-top: 30px;
 `;
 
 const Errors = styled.p`
@@ -125,7 +126,7 @@ const Return = styled(NavLink)`
   margin-top: 15px;
   text-decoration: none;
   color: black;
-  width: 95%;
+  margin: 5px;
 
   &&:hover {
     box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);

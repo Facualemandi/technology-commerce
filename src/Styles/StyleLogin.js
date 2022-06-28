@@ -26,15 +26,16 @@ export const StyleLogin = () => {
     flex-direction: column;
 
     @media (min-width: 780px) {
-      width: 40vw;
+      width: 30vw;
       display: flex;
       justify-content: center;
       height: 300px;
     }
   `;
+
   const Section = styled.section`
     border: 1px solid rgba(209, 209, 209, 0.567);
-    height: 75vh;
+    height: auto;
     border-radius: 10px;
 
     @media (min-width: 780px) {
@@ -42,6 +43,7 @@ export const StyleLogin = () => {
       display: flex;
       border-radius: 10px;
       border: 2px solid rgba(209, 209, 209, 0.567);
+      width: auto;
     }
   `;
 
@@ -51,6 +53,9 @@ export const StyleLogin = () => {
     margin: 5px;
     padding: 10px;
     width: 95%;
+    @media (min-width: 780px){
+         width: 30vw;
+    }
   `;
 
   const Label = styled.label`
@@ -70,8 +75,10 @@ export const StyleLogin = () => {
     cursor: pointer;
     transition: 0.5s;
 
+
     @media (min-width: 780px) {
       margin: 5px;
+      width: 30vw;
 
       &&:hover {
         background-color: #a7cff5;
@@ -92,7 +99,7 @@ export const StyleLogin = () => {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       height: 400px;
-      width: 40vw;
+      width: 30vw;
     }
   `;
 
