@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/technology-commerce/static/css/main.c7ec3132.css",
-    "main.js": "/technology-commerce/static/js/main.3693cba5.js",
+    "main.js": "/technology-commerce/static/js/main.3900f77b.js",
     "index.html": "/technology-commerce/index.html",
     "main.c7ec3132.css.map": "/technology-commerce/static/css/main.c7ec3132.css.map",
-    "main.3693cba5.js.map": "/technology-commerce/static/js/main.3693cba5.js.map"
+    "main.3900f77b.js.map": "/technology-commerce/static/js/main.3900f77b.js.map"
   },
   "entrypoints": [
     "static/css/main.c7ec3132.css",
-    "static/js/main.3693cba5.js"
+    "static/js/main.3900f77b.js"
   ]
 }
