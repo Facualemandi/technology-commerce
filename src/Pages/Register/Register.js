@@ -1,9 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { useAuth } from "../../Context/authContext";
-import imgRegister from "../../Images/Register.png";
-
-import styled from "styled-components";
+import React from "react";
+import venex from "../../Images/Venexcomputacion.png";
 import { StyleRegister } from "../../Styles/StyleRegister";
 import { UseRegister } from "../../Hooks/UseRegister";
 
@@ -27,10 +23,10 @@ const Register = () => {
     <>
       <Main>
         <Section>
-          <Img alt="Tecnología" src={imgRegister} />
+          <Img alt="Tecnología" src={venex} />
 
           <Form onSubmit={handleSubmit}>
-            <Paragraph>Bienvenidos a Technology</Paragraph>
+            <Paragraph>Bienvenidos a Venex</Paragraph>
 
             <Label htmlFor="email">email</Label>
             <Input

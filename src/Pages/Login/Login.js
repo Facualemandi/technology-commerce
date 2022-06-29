@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import imgRegister from "../../Images/Register.png";
+import imgRegister from "../../Images/Venexcomputacion.png";
 import { FcGoogle } from "react-icons/fc";
 import { useLogin } from "../../Hooks/useLogin";
 import { StyleLogin } from "../../Styles/StyleLogin";
@@ -38,7 +37,7 @@ const Register = () => {
 
           <SectionDesktop>
             <Form onSubmit={handleSubmit}>
-              <Paragraph>Bienvenidos a Technology</Paragraph>
+              <Paragraph>Bienvenidos a Venex</Paragraph>
               {notUser && <Errors>{notUser}</Errors>}
 
               <Label htmlFor="email">email</Label>

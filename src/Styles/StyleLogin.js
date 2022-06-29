@@ -29,7 +29,7 @@ export const StyleLogin = () => {
       width: 30vw;
       display: flex;
       justify-content: center;
-      height: 300px;
+      height: 270px;
     }
   `;
 
