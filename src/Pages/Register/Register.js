@@ -26,8 +26,6 @@ const Register = () => {
           <Img alt="Tecnología" src={venex} />
 
           <Form onSubmit={handleSubmit}>
-            <Paragraph>Bienvenidos a Venex</Paragraph>
-
             <Label htmlFor="email">email</Label>
             <Input
               type={"email"}

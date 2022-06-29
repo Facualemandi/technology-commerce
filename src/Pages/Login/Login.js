@@ -37,7 +37,6 @@ const Register = () => {
 
           <SectionDesktop>
             <Form onSubmit={handleSubmit}>
-              <Paragraph>Bienvenidos a Venex</Paragraph>
               {notUser && <Errors>{notUser}</Errors>}
 
               <Label htmlFor="email">email</Label>
