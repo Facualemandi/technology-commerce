@@ -34,16 +34,20 @@ export const StyleLogin = () => {
   `;
 
   const Section = styled.section`
-    border: 1px solid rgba(209, 209, 209, 0.567);
+    box-shadow: 0px 0px 10px 0px rgba(26, 26, 26, 0.25);
     height: auto;
-    border-radius: 15px;
+    border-radius: 30px;
     padding: 7px;
     background-color: #e4ecf4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     @media (min-width: 780px) {
       height: auto;
       display: flex;
-      border-radius: 15px;
+      border-radius: 30px;
       width: auto;
     }
   `;
@@ -97,6 +101,7 @@ export const StyleLogin = () => {
     width: 90vw;
     height: 250px;
     border-radius: 30px;
+    margin: 0;
 
     @media (min-width: 780px) {
       border-radius: 30px;
