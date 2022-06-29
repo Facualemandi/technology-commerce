@@ -36,13 +36,14 @@ export const StyleLogin = () => {
   const Section = styled.section`
     border: 1px solid rgba(209, 209, 209, 0.567);
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
+    padding: 7px;
+    background-color: #e4ecf4;
 
     @media (min-width: 780px) {
       height: auto;
       display: flex;
-      border-radius: 10px;
-      border: 2px solid rgba(209, 209, 209, 0.567);
+      border-radius: 15px;
       width: auto;
     }
   `;
@@ -53,8 +54,11 @@ export const StyleLogin = () => {
     margin: 5px;
     padding: 10px;
     width: 95%;
-    @media (min-width: 780px){
-         width: 30vw;
+    border-radius: 10px;
+    background-color: #d4dcec;
+    margin-bottom: 15px;
+    @media (min-width: 780px) {
+      width: 30vw;
     }
   `;
 
@@ -66,7 +70,6 @@ export const StyleLogin = () => {
   const Buttom = styled.button`
     padding: 10px;
     border-radius: 5px;
-    background-color: #badcfb;
     border: none;
     font-family: "Montserrat", sans-serif;
     margin: 5px;
@@ -74,7 +77,9 @@ export const StyleLogin = () => {
     border: ${({ border }) => border};
     cursor: pointer;
     transition: 0.5s;
-
+    background-color: #44547c;
+    border-radius: 10px;
+    color: white;
 
     @media (min-width: 780px) {
       margin: 5px;
@@ -91,23 +96,13 @@ export const StyleLogin = () => {
   const Img = styled.img`
     width: 90vw;
     height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 30px;
 
     @media (min-width: 780px) {
-      border-top-right-radius: 0px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-radius: 30px;
       height: 400px;
       width: 30vw;
     }
-  `;
-
-  const Paragraph = styled.p`
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px auto;
   `;
 
   const Errors = styled.p`
@@ -146,6 +141,13 @@ export const StyleLogin = () => {
     margin-left: 10px;
   `;
 
+  const LoginParragraph = styled.p`
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #44547c;
+    margin: 10px;
+  `;
+
   return {
     Main,
     Form,
@@ -154,10 +156,10 @@ export const StyleLogin = () => {
     Label,
     Buttom,
     Img,
-    Paragraph,
     Errors,
     NoAccounts,
     StyleLink,
     SectionDesktop,
+    LoginParragraph,
   };
 };

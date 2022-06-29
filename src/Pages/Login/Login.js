@@ -12,11 +12,11 @@ const {
   Label,
   Buttom,
   Img,
-  Paragraph,
   Errors,
   NoAccounts,
   StyleLink,
   SectionDesktop,
+  LoginParragraph,
 } = StyleLogin();
 
 const Register = () => {
@@ -38,8 +38,8 @@ const Register = () => {
           <SectionDesktop>
             <Form onSubmit={handleSubmit}>
               {notUser && <Errors>{notUser}</Errors>}
-
-              <Label htmlFor="email">email</Label>
+              <LoginParragraph>Login</LoginParragraph>
+              {/* <Label htmlFor="email">email</Label> */}
               <Input
                 type={"email"}
                 name="email"
@@ -48,7 +48,7 @@ const Register = () => {
               />
               {invalidEmail && <Errors>{invalidEmail}</Errors>}
 
-              <Label htmlFor="password">Contraseña</Label>
+              {/* <Label htmlFor="password">Contraseña</Label> */}
               <Input
                 type={"password"}
                 name="password"

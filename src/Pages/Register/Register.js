@@ -11,7 +11,6 @@ const {
   Label,
   Buttom,
   Img,
-  Paragraph,
   Errors,
   Return,
 } = StyleRegister();
