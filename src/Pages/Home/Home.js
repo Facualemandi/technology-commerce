@@ -5,7 +5,7 @@ import SliderShow from "../../Components/SliderShow";
 import { useAuth } from "../../Context/authContext";
 
 const Home = () => {
-  const { user, logAut, form } = useAuth();
+  const { logAut } = useAuth();
   const isLogAuth = useNavigate();
   const handleLogOut = async () => {
     await logAut();
