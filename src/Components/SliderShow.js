@@ -5,7 +5,9 @@ import { AiOutlineLeft } from "react-icons/ai";
 import imgOne from "../Images/slider1.png";
 import imgTwo from "../Images/slider2.png";
 import imgThree from "../Images/slider3.png";
-
+import ImgDesktopOne from "../Images/DesktopImg1.jpg";
+import ImgDesktopTwo from "../Images/ImgDesktop2.jpg";
+import ImgDesktopThree from "../Images/ImgDesktop3.jpg";
 const SliderShow = () => {
   const slideShow = useRef(null);
 
@@ -71,15 +73,16 @@ const SliderShow = () => {
       <ContenedorDiv>
         <ContenedorSliderShow ref={slideShow}>
           <Slide>
-            <img alt="" src={imgOne} />
-
+            <Img alt="" src={imgOne} dblockDesk="block" dnoneDesk="none" />
+            <Img alt="" src={ImgDesktopOne} dnone="none" dblock="block" />
             <TextoSlide>
               <p>15% de Descuentos</p>
             </TextoSlide>
           </Slide>
 
           <Slide>
-            <img alt="" src={imgTwo} />
+            <Img alt="" src={imgTwo} dblockDesk="block" dnoneDesk="none" />
+            <Img alt="" src={ImgDesktopTwo} dnone="none" dblock="block" />
 
             <TextoSlide>
               <p>30% de Descuentos</p>
@@ -87,7 +90,8 @@ const SliderShow = () => {
           </Slide>
 
           <Slide>
-            <img alt="" src={imgThree} />
+            <Img alt="" src={imgThree} dblockDesk="block" dnoneDesk="none" />
+            <Img alt="" src={ImgDesktopThree} dnone="none" dblock="block" />
 
             <TextoSlide>
               <p>45% de Descuentos</p>
@@ -113,6 +117,7 @@ const ContenedorDiv = styled.div`
   overflow: hidden;
   position: relative;
 `;
+
 const ContenedorSliderShow = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -131,6 +136,10 @@ const Slide = styled.div`
   img {
     width: 100%;
     vertical-align: top;
+  }
+
+  @media (min-width: 760px) {
+    height: 250px;
   }
 `;
 
@@ -178,6 +187,21 @@ const Rigth = styled(AiOutlineRight)`
 const Left = styled(AiOutlineLeft)`
   width: 40px;
   height: 40px;
+  @media screen and (min-width: 780px) {
+    cursor: pointer;
+  }
+`;
+
+const Img = styled.img`
+  display: ${({ dnone }) => dnone};
+  display: ${({ dblockDesk }) => dblockDesk};
+  max-height: 400px;
+
+  @media (min-width: 760px) {
+    display: ${({ dnoneDesk }) => dnoneDesk};
+    display: ${({ dblock }) => dblock};
+    height: 300px;
+  }
 `;
 
 export default SliderShow;
