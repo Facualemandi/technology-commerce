@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import venex from "../../Images/Venexcomputacion.png";
 import { StyleRegister } from "../../Styles/StyleRegister";
 import { UseRegister } from "../../Hooks/UseRegister";
+import { StyleLogin } from "../../Styles/StyleLogin";
 
-const {
-  Main,
-  Form,
-  Section,
-  Input,
-  Label,
-  Buttom,
-  Img,
-  Errors,
-  Return,
-} = StyleRegister();
+const { Main, Form, Errors, Return, RegParr } = StyleRegister();
+
+const { Buttom, Section, Img, Input, SectionDesktop, } = StyleLogin();
 
 const Register = () => {
   const { invalidEmail, errorPass, handleChnade, handleSubmit } = UseRegister();
+
 
   return (
     <>
@@ -24,29 +18,31 @@ const Register = () => {
         <Section>
           <Img alt="Tecnología" src={venex} />
 
-          <Form onSubmit={handleSubmit}>
-            <Label htmlFor="email">email</Label>
-            <Input
-              type={"email"}
-              name="email"
-              placeholder="Ingresa tu Email"
-              onChange={handleChnade}
-            />
-            {invalidEmail && <Errors>{invalidEmail}</Errors>}
+          <SectionDesktop>
+            <RegParr>Registrarse</RegParr>
 
-            <Label htmlFor="password">Contraseña</Label>
-            <Input
-              type={"password"}
-              name="password"
-              placeholder="Ingresa una contraseña"
-              onChange={handleChnade}
-            />
-            {errorPass && <Errors>{errorPass}</Errors>}
+            <Form onSubmit={handleSubmit}>
+              <Input
+                type={"email"}
+                name="email"
+                placeholder="Ingresa un Email"
+                onChange={handleChnade}
+              />
+              {invalidEmail && <Errors>{invalidEmail}</Errors>}
 
-            <Buttom>Registrarme</Buttom>
+              <Input
+                type={"password"}
+                name="password"
+                placeholder="Ingresa una contraseña"
+                onChange={handleChnade}
+              />
+              {errorPass && <Errors>{errorPass}</Errors>}
 
-            <Return to={"/"}>Volver</Return>
-          </Form>
+              <Buttom>Registrarme</Buttom>
+
+              <Return to={"/"}>Volver</Return>
+            </Form>
+          </SectionDesktop>
         </Section>
       </Main>
     </>

@@ -9,7 +9,6 @@ const {
   Form,
   Section,
   Input,
-  Label,
   Buttom,
   Img,
   Errors,

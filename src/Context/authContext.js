@@ -35,20 +35,18 @@ export function AuthProvider({ children }) {
 
   const logAut = () => {
     signOut(auth);
-    console.log(user)
+    console.log(user);
   };
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(user)
-
     });
   }, [user]);
 
   return (
     <authContext.Provider
-      value={{ signUp, login, user, logAut, logInWithGoogle }}
+      value={{ signUp, login, user, logAut, logInWithGoogle}}
     >
       {children}
     </authContext.Provider>

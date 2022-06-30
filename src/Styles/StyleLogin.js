@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
@@ -37,7 +36,7 @@ export const StyleLogin = () => {
     box-shadow: 0px 0px 10px 0px rgba(26, 26, 26, 0.25);
     height: auto;
     border-radius: 30px;
-    padding: 7px;
+    padding: 10px;
     background-color: #e4ecf4;
     display: flex;
     justify-content: center;
@@ -47,6 +46,7 @@ export const StyleLogin = () => {
     @media (min-width: 780px) {
       height: auto;
       display: flex;
+      flex-direction: row;
       border-radius: 30px;
       width: auto;
     }
@@ -84,13 +84,14 @@ export const StyleLogin = () => {
     background-color: #44547c;
     border-radius: 10px;
     color: white;
+    width: 95%;
 
     @media (min-width: 780px) {
       margin: 5px;
       width: 30vw;
 
       &&:hover {
-        background-color: #a7cff5;
+        background-color: #576b9d;
         box-shadow: 0px 0px 5px 0px rgba(135, 135, 135, 0.402);
         transition: 0.5s;
       }
