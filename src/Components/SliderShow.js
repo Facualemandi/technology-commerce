@@ -55,16 +55,16 @@ const SliderShow = () => {
   //       siguiente()
   // }, 5000)
 
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      siguiente();
-    }, 4000);
-    // Eliminar intervalos
+  // useEffect(() => {
+  //   const intervalo = setInterval(() => {
+  //     siguiente();
+  //   }, 4000);
+  //   // Eliminar intervalos
 
-    slideShow.current.addEventListener("mouse", () => {
-      clearInterval(intervalo);
-    });
-  }, []);
+  //   slideShow.current.addEventListener("mouse", () => {
+  //     clearInterval(intervalo);
+  //   });
+  // }, []);
 
   return (
     <>

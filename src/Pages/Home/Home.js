@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Nav from "../../Components/Nav";
 import SliderShow from "../../Components/SliderShow";
 import { useAuth } from "../../Context/authContext";
 
@@ -11,12 +12,10 @@ const Home = () => {
     isLogAuth("/");
   };
 
-
-
   return (
     <>
-    <p>Hola</p>
-      <SliderShow/>
+      <Nav />
+      <SliderShow />
       <button onClick={handleLogOut}>Log Out</button>
     </>
   );
