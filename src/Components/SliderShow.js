@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineLeft } from "react-icons/ai";
@@ -50,6 +50,21 @@ const SliderShow = () => {
       }, 30);
     }
   };
+
+  // setInterval(() => {
+  //       siguiente()
+  // }, 5000)
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      siguiente();
+    }, 4000);
+    // Eliminar intervalos
+
+    slideShow.current.addEventListener("mouse", () => {
+      clearInterval(intervalo);
+    });
+  }, []);
 
   return (
     <>
@@ -127,11 +142,6 @@ const TextoSlide = styled.div`
   text-align: center;
   position: absolute;
   bottom: 0;
-
-  @media screen and (max-width: 700px) {
-    position: relative;
-    background-color: black;
-  }
 `;
 
 const Controles = styled.div`
