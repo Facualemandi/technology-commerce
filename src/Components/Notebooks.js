@@ -13,6 +13,9 @@ const Parragraph = styled.p`
   margin-top: 50px;
   font-weight: bold;
   color: #303030;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 `;
 
 const Section = styled.section`
@@ -56,20 +59,25 @@ const Price = styled.p`
   margin-top: 15px;
   font-size: 16px;
   margin: 5px;
+  margin-top: 10px;
 `;
 
-const Notebooks = ({ notebook }) => {
+const Notebooks = ({ notebook, loaging }) => {
   return (
     <Main>
       <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
 
       <SectionContianer>
         {notebook.map((note) => (
-          <Section>
-            <Img alt={note.name} src={note.img} />
-            <NameProduct>{note.name}</NameProduct>
-            <Price>${note.price}</Price>
-          </Section>
+          <>
+            {!loaging && (
+              <Section>
+                <Img alt={note.name} src={note.img} />
+                <NameProduct>{note.name}</NameProduct>
+                <Price>${note.price}</Price>
+              </Section>
+            )}
+          </>
         ))}
       </SectionContianer>
     </Main>

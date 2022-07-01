@@ -12,13 +12,15 @@ import { db } from "../../Firebase";
 
 const Home = () => {
   const [notebook, setNotebook] = useState([]);
+  const [loaging, setLoaging] = useState(false)
 
   const productsCollection = collection(db, "Products");
 
   const getProducts = async () => {
+    setLoaging(true)
     const data = await getDocs(productsCollection);
-    console.log(data.docs);
     setNotebook(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    setLoaging(false)
   };
 
   useEffect(() => {
@@ -35,7 +37,8 @@ const Home = () => {
       <SliderShow />
       <Marks />
       <Categories />
-      <Notebooks  notebook={notebook}/>
+    
+      <Notebooks  notebook={notebook} loaging={loaging}/>
     </>
   );
 };
