@@ -19,7 +19,7 @@ const Categories = () => {
 
         <Section>
           <Image alt="Microprocesador" src={Microprocesadores} />
-          <Paragraph>Micro-Procesadores</Paragraph>
+          <Paragraph>Procesadores</Paragraph>
         </Section>
 
         <Section>

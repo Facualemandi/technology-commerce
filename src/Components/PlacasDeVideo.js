@@ -6,13 +6,13 @@ import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
   StyleHomeProducts();
 
-const Notebooks = ({ notebook, loaging }) => {
+const PlacasDeVideo = ({ placas, loaging }) => {
   return (
     <Main>
-      <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
+      <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
 
       <SectionContianer>
-        {notebook.map((note) => (
+        {placas.map((note) => (
           <>
             {loaging && <Loader />}
 
@@ -30,4 +30,4 @@ const Notebooks = ({ notebook, loaging }) => {
   );
 };
 
-export default Notebooks;
+export default PlacasDeVideo;

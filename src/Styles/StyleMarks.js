@@ -45,9 +45,9 @@ export const StyleMarks = () => {
     }
   `;
 
-  const MarksImages = styled.p`
+  const MarksImages = styled.section`
     margin: 15px;
-    width: 150px;
+    width: 190px;
     height: 235px;
     position: relative;
     border-radius: 10px;

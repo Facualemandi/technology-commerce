@@ -9,17 +9,23 @@ import SliderShow from "../../Components/SliderShow";
 import { collection, getDocs, getDoc, deleteDoc } from "firebase/firestore";
 /// Llmamos a la Base de datos
 import { db } from "../../Firebase";
+import PlacasDeVideo from "../../Components/PlacasDeVideo";
 
 const Home = () => {
   const [notebook, setNotebook] = useState([]);
+  const [placas, setPlacas] = useState([])
+
   const [loaging, setLoaging] = useState(false)
 
   const productsCollection = collection(db, "Products");
+  const productsPlacas = collection(db, "Placas");
 
   const getProducts = async () => {
     setLoaging(true)
     const data = await getDocs(productsCollection);
+    const placas =  await getDocs(productsPlacas)
     setNotebook(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    setPlacas(placas.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     setLoaging(false)
   };
 
@@ -28,7 +34,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    console.log(notebook);
+    console.log(placas);
   }, [notebook]);
 
   return (
@@ -38,6 +44,8 @@ const Home = () => {
       <Marks />
       <Categories />
       <Notebooks  notebook={notebook} loaging={loaging}/>
+      <PlacasDeVideo placas={placas} loaging={loaging} />
+  
     </>
   );
 };

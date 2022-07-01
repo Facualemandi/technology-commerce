@@ -56,7 +56,7 @@ const Marks = () => {
           <Image alt="Intel Core" src={RedDragon} />
           <ImageRounder alt="Intel Core" src={RedDragonRounder} />
 
-          <Mark>Nvidia</Mark>
+          <Mark>Red Dragon</Mark>
         </MarksImages>
 
         <MarksImages>
