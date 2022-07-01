@@ -1,14 +1,17 @@
 import React from "react";
+import { useProducts } from "../Hooks/useProducts";
 import Loader from "../Loader/Loader";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 
 const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
   StyleHomeProducts();
 
-const Monitores = ({ monitores, loaging }) => {
+const Monitores = ({ loaging }) => {
+    const {monitores} = useProducts();
+    
   return (
     <Main>
-      <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
+      <Parragraph>Resolución al Máximo!</Parragraph>
 
       <SectionContianer>
         {monitores.map((note) => (

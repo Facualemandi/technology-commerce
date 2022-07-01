@@ -1,4 +1,5 @@
 import React from "react";
+import { useProducts } from "../Hooks/useProducts";
 import Loader from "../Loader/Loader";
 
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
@@ -6,7 +7,9 @@ import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
   StyleHomeProducts();
 
-const PlacasDeVideo = ({ placas, loaging }) => {
+const PlacasDeVideo = () => {
+  const { placas, loaging } = useProducts();
+
   return (
     <Main>
       <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
