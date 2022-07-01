@@ -25,7 +25,7 @@ const Parragraph = styled.p`
   width: 300px;
 
   @media (min-width: 760px) {
-    width: 90%;
+    width: 1080px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -38,6 +38,22 @@ const Section = styled.section`
   display: flex;
   width: auto;
   overflow: scroll;
+
+  @media (min-width: 760px) {
+    overflow: scroll;
+    width: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1080px){
+    width: 1080px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
 `;
 
 const MarksImages = styled.p`
@@ -51,6 +67,11 @@ const MarksImages = styled.p`
 
 const Main = styled.main`
   overflow: scroll;
+
+  @media (min-width: 760px) {
+    overflow: hidden;
+    overflow-y: hidden;
+  }
 `;
 
 const Image = styled.img`
