@@ -37,7 +37,6 @@ const Home = () => {
       <SliderShow />
       <Marks />
       <Categories />
-    
       <Notebooks  notebook={notebook} loaging={loaging}/>
     </>
   );

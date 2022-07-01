@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Loader from "../Loader/Loader";
 
 const Main = styled.main`
   width: 100vw;
@@ -19,33 +20,28 @@ const Parragraph = styled.p`
 `;
 
 const Section = styled.section`
-  width: 150px;
-  margin: 10px;
   border: 1px solid #e0e0e0a9;
   border-radius: 10px;
   height: auto;
+  width: 90%;
+  margin: 10px;
 `;
 
 const SectionContianer = styled.section`
   width: 100vw;
-  display: flex;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
 `;
 const Img = styled.img`
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   width: 100%;
   height: 150px;
-  background: #757f9a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #d7dde8,
-    #757f9a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #d7dde8,
-    #757f9a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #9da5bd;
+  background: -webkit-linear-gradient(to top, #e1e6ef, #9da5bd);
+  background: linear-gradient(to top, #e1e6ef, #9da5bd);
 `;
 
 const NameProduct = styled.p`
@@ -58,7 +54,7 @@ const Price = styled.p`
   font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   font-size: 16px;
-  margin: 5px;
+  margin: 10px;
   margin-top: 10px;
 `;
 
@@ -70,6 +66,8 @@ const Notebooks = ({ notebook, loaging }) => {
       <SectionContianer>
         {notebook.map((note) => (
           <>
+            {loaging && <Loader />}
+
             {!loaging && (
               <Section>
                 <Img alt={note.name} src={note.img} />
