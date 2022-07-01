@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/technology-commerce/static/css/main.91060daf.css",
-    "main.js": "/technology-commerce/static/js/main.74b29054.js",
+    "main.js": "/technology-commerce/static/js/main.4019764b.js",
     "static/media/slider1.png": "/technology-commerce/static/media/slider1.5a09efa66accfd79c6bb.png",
     "static/media/slider3.png": "/technology-commerce/static/media/slider3.0560a542b4815c4bd594.png",
     "static/media/slider2.png": "/technology-commerce/static/media/slider2.41d26b1bf5077f0abed3.png",
     "static/media/ImgDesktop2.jpg": "/technology-commerce/static/media/ImgDesktop2.16a498f719ffa610e206.jpg",
     "static/media/ImgDesktop3.jpg": "/technology-commerce/static/media/ImgDesktop3.095c7feffb05c06cf597.jpg",
+    "static/media/intelCore.jpg": "/technology-commerce/static/media/intelCore.ce42dd3848b4bc0511cb.jpg",
     "static/media/DesktopImg1.jpg": "/technology-commerce/static/media/DesktopImg1.7ed8815ce1e0c7ce4f54.jpg",
     "static/media/Venexcomputacion.png": "/technology-commerce/static/media/Venexcomputacion.74a5a878b454b957412c.png",
     "index.html": "/technology-commerce/index.html",
     "main.91060daf.css.map": "/technology-commerce/static/css/main.91060daf.css.map",
-    "main.74b29054.js.map": "/technology-commerce/static/js/main.74b29054.js.map"
+    "main.4019764b.js.map": "/technology-commerce/static/js/main.4019764b.js.map"
   },
   "entrypoints": [
     "static/css/main.91060daf.css",
-    "static/js/main.74b29054.js"
+    "static/js/main.4019764b.js"
   ]
 }
