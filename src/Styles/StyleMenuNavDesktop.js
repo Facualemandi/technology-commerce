@@ -8,7 +8,7 @@ const Section = styled.section`
   position: absolute;
   z-index: 100;
   top: 60px;
-  background-color: #13387e;
+  background-color: #37373f;
   display: none;
 
   @media (min-width: 760px) {
@@ -19,6 +19,7 @@ const Section = styled.section`
     top: 0px;
     height: 60px;
     width: 100vw;
+    background-color: #37373f;
   }
 `;
 
@@ -45,7 +46,7 @@ const Li = styled.li`
 
   @media (min-width: 760px) {
     &&:hover {
-      background-color: #3252a1;
+      background-color: #4e4e53;
       transition: 0.5s;
       cursor: pointer;
     }
@@ -68,14 +69,15 @@ const Buttom = styled.button`
   padding: 5px;
   border-radius: 5px;
   border: none;
-  background-color: #3756a5;
+  background-color: #4c4c57;
   color: white;
   cursor: pointer;
   transition: 0.5s;
 
   &&:hover {
-    background-color: #4765b1;
+    background-color: #545459;
     transition: 0.5s;
+    color: white;
   }
 `;
 
@@ -85,6 +87,6 @@ export const StyleMenuNavDesktop = () => {
     Ul,
     Li,
     IconCart,
-    Buttom
+    Buttom,
   };
 };
