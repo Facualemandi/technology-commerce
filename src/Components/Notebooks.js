@@ -7,7 +7,7 @@ const Main = styled.main`
 
 const Parragraph = styled.p`
   font-family: "Montserrat";
-  width: 100vw;
+  width: 90vw;
   display: flex;
   margin: auto;
   margin-top: 50px;
