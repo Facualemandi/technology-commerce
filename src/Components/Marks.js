@@ -1,7 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import intelCore from "../Images/intelCore.jpg";
+import Nvidia from "../Images/Nvidia.jpg";
+import HyperX from "../Images/HyperX.jpg";
+import RedDragon from "../Images/RedDragon.jpg";
+import Ryzen from "../Images/Ryzen.jpg";
+import Logitech from "../Images/Logitech.jpg";
 import intelRounder from "../Images/IntelRounder.jpg";
+import HyperXRounder from "../Images/HyperXRounder.jpg";
+import LogitechRounder from "../Images/LogitechRounder.jpg";
+import AmdRounder from "../Images/AmdRounder.jpg";
+import RedDragonRounder from "../Images/RedDragonRounder.jpg";
+import NvidiaRounder from "../Images/NvidiaRounder.jpg";
 
 const Parragraph = styled.p`
   font-family: "Montserrat", sans-serif;
@@ -26,7 +36,7 @@ const Parragraph = styled.p`
 
 const Section = styled.section`
   display: flex;
-  width: 700px;
+  width: auto;
   overflow: scroll;
 `;
 
@@ -64,7 +74,7 @@ const Mark = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
   color: green;
 `;
@@ -82,8 +92,40 @@ const Marks = () => {
           <Mark>Intel</Mark>
         </MarksImages>
 
-        <MarksImages>Facu</MarksImages>
-        <MarksImages>Facu</MarksImages>
+        <MarksImages>
+          <Image alt="Intel Core" src={HyperX} />
+          <ImageRounder alt="Intel Core" src={HyperXRounder} />
+
+          <Mark>HyperX</Mark>
+        </MarksImages>
+
+        <MarksImages>
+          <Image alt="Intel Core" src={Logitech} />
+          <ImageRounder alt="Intel Core" src={LogitechRounder} />
+
+          <Mark>Logitech</Mark>
+        </MarksImages>
+
+        <MarksImages>
+          <Image alt="Intel Core" src={Ryzen} />
+          <ImageRounder alt="Intel Core" src={AmdRounder} />
+
+          <Mark>Ryzen</Mark>
+        </MarksImages>
+
+        <MarksImages>
+          <Image alt="Intel Core" src={RedDragon} />
+          <ImageRounder alt="Intel Core" src={RedDragonRounder} />
+
+          <Mark>Nvidia</Mark>
+        </MarksImages>
+
+        <MarksImages>
+          <Image alt="Intel Core" src={Nvidia} />
+          <ImageRounder alt="Intel Core" src={NvidiaRounder} />
+
+          <Mark>Nvidia</Mark>
+        </MarksImages>
       </Section>
     </Main>
   );
