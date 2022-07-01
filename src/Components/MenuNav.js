@@ -16,7 +16,7 @@ const MenuNav = () => {
           <Li>Perifericos</Li>
           <Li>Placas de Video</Li>
           <Li>Monitores</Li>
-          <Li>Tablets</Li>
+          <Li>Microprocesadores</Li>
         </Ul>
 
         <Buttom onClick={handleLogOut}>Cerrar Sesion</Buttom>
