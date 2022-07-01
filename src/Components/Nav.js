@@ -31,10 +31,7 @@ const IconCart = styled(BsCart3)`
   margin-right: 10px;
 
   @media (min-width: 760px) {
-    display: flex;
-    z-index: 200;
-    position: absolute;
-    right: 30px;
+    display: none;
   }
 `;
 
@@ -55,7 +52,7 @@ const Nav = () => {
       <NavBar>
         <IconBurger onClick={openNav} />
         {openMenu && <MenuNav openMenu={openMenu} />}
-        <MenuNavDesktop/>
+        <MenuNavDesktop />
         <IconCart />
       </NavBar>
     </>

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-
+import { useLogOut } from "../Hooks/useLogOut";
 
 const Section = styled.section`
   width: 50%;
@@ -49,7 +48,25 @@ const Li = styled.li`
   }
 `;
 
+const Buttom = styled.button`
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3756a5;
+  color: white;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+
+  @media (min-width: 760px) {
+    display: none;
+  }
+`;
+
 const MenuNav = ({ openMenu }) => {
+  const { handleLogOut } = useLogOut();
+
   return (
     <>
       <Section>
@@ -60,6 +77,8 @@ const MenuNav = ({ openMenu }) => {
           <Li>Monitores</Li>
           <Li>Tablets</Li>
         </Ul>
+
+        <Buttom onClick={handleLogOut}>Cerrar Sesion</Buttom>
       </Section>
     </>
   );

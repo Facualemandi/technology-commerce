@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { BsCart3 } from "react-icons/bs";
+import { useLogOut } from "../Hooks/useLogOut";
 
 const Section = styled.section`
   width: 50%;
@@ -7,16 +9,17 @@ const Section = styled.section`
   position: absolute;
   z-index: 100;
   top: 60px;
-  transition: 1s;
   background-color: #13387e;
   display: none;
 
   @media (min-width: 760px) {
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     top: 0px;
-    height: 70px;
-    width: auto;
-
+    height: 60px;
+    width: 100vw;
   }
 `;
 
@@ -26,7 +29,7 @@ const Ul = styled.ul`
 
   @media (min-width: 760px) {
     display: flex;
-    width: 100vw;
+    width: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -39,7 +42,7 @@ const Li = styled.li`
   border-radius: 5px;
   color: white;
   margin: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
 
   @media (min-width: 760px) {
     &&:hover {
@@ -50,9 +53,39 @@ const Li = styled.li`
   }
 `;
 
+const IconCart = styled(BsCart3)`
+  display: none;
+
+  @media (min-width: 760px) {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+`;
+
+const Buttom = styled.button`
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3756a5;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &&:hover {
+    background-color: #4765b1;
+    transition: 0.5s;
+  }
+`;
+
 const MenuNavDesktop = () => {
+  const { handleLogOut } = useLogOut();
+
   return (
     <Section>
+      <Buttom onClick={handleLogOut}>Cerrar Sesion</Buttom>
       <Ul>
         <Li>Notebooks</Li>
         <Li>Perifericos</Li>
@@ -60,6 +93,7 @@ const MenuNavDesktop = () => {
         <Li>Monitores</Li>
         <Li>Tablets</Li>
       </Ul>
+      <IconCart />
     </Section>
   );
 };
