@@ -4,31 +4,9 @@ import Monitores from "../Images/ImagesCategorie/Monitores.png";
 import PlacasDeVideo from "../Images/ImagesCategorie/PlacasDeVideo.png";
 import Notebooks from "../Images/ImagesCategorie/Notebooks.png";
 import Perifericos from "../Images/ImagesCategorie/Perifericos.png";
-import styled from "styled-components";
+import { StyleCategories } from "../Styles/StyleCategories";
 
-const Main = styled.main`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 30px;
-`;
-const Image = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Paragraph = styled.p`
-  font-size: 12px;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
-`;
+const { Main, Image, Section, Paragraph } = StyleCategories();
 
 const Categories = () => {
   return (
