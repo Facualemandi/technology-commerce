@@ -9,7 +9,7 @@ const Section = styled.section`
   z-index: 100;
   top: 60px;
   transition: 1s;
-  background-color: #13387e;
+  background-color: #5e5e65;
 
   @media (min-width: 760px) {
     top: 0px;
@@ -38,6 +38,8 @@ const Li = styled.li`
   color: white;
   margin: 10px;
   margin-top: 30px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 
   @media (min-width: 760px) {
     &&:hover {
@@ -53,7 +55,7 @@ const Buttom = styled.button`
   padding: 5px;
   border-radius: 5px;
   border: none;
-  background-color: #3756a5;
+  background-color: #78787e;
   color: white;
   display: flex;
   margin: auto;

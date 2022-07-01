@@ -4,9 +4,11 @@ import { FiAlignLeft } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
 import MenuNav from "./MenuNav";
 import MenuNavDesktop from "./MenuNavDesktop";
+
+
 const NavBar = styled.nav`
   height: 60px;
-  background-color: #082061;
+  background-color: #37373f;
   display: flex;
   justify-content: space-between;
   align-items: center;
