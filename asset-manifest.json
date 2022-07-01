@@ -1,10 +1,15 @@
 {
   "files": {
     "main.css": "/technology-commerce/static/css/main.91060daf.css",
-    "main.js": "/technology-commerce/static/js/main.7b86b7e0.js",
+    "main.js": "/technology-commerce/static/js/main.46c7300b.js",
     "static/media/slider1.png": "/technology-commerce/static/media/slider1.5a09efa66accfd79c6bb.png",
     "static/media/slider3.png": "/technology-commerce/static/media/slider3.0560a542b4815c4bd594.png",
+    "static/media/Microprocesador.png": "/technology-commerce/static/media/Microprocesador.b1b36b8e1273f575c1ea.png",
+    "static/media/Perifericos.png": "/technology-commerce/static/media/Perifericos.4c62abfe6dd5fc3304b5.png",
+    "static/media/Monitores.png": "/technology-commerce/static/media/Monitores.9e6300bbea6fa10395e5.png",
     "static/media/slider2.png": "/technology-commerce/static/media/slider2.41d26b1bf5077f0abed3.png",
+    "static/media/PlacasDeVideo.png": "/technology-commerce/static/media/PlacasDeVideo.aaf613866dd45061dd8b.png",
+    "static/media/Notebooks.png": "/technology-commerce/static/media/Notebooks.c751a11981321164de39.png",
     "static/media/ImgDesktop2.jpg": "/technology-commerce/static/media/ImgDesktop2.16a498f719ffa610e206.jpg",
     "static/media/ImgDesktop3.jpg": "/technology-commerce/static/media/ImgDesktop3.095c7feffb05c06cf597.jpg",
     "static/media/intelCore.jpg": "/technology-commerce/static/media/intelCore.ce42dd3848b4bc0511cb.jpg",
@@ -12,10 +17,10 @@
     "static/media/Venexcomputacion.png": "/technology-commerce/static/media/Venexcomputacion.74a5a878b454b957412c.png",
     "index.html": "/technology-commerce/index.html",
     "main.91060daf.css.map": "/technology-commerce/static/css/main.91060daf.css.map",
-    "main.7b86b7e0.js.map": "/technology-commerce/static/js/main.7b86b7e0.js.map"
+    "main.46c7300b.js.map": "/technology-commerce/static/js/main.46c7300b.js.map"
   },
   "entrypoints": [
     "static/css/main.91060daf.css",
-    "static/js/main.7b86b7e0.js"
+    "static/js/main.46c7300b.js"
   ]
 }
