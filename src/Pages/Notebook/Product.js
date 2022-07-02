@@ -53,7 +53,7 @@ const Main = styled.main`
   }
 
   @media (min-width: 1260px) {
-     width: 80vw;
+    width: 80vw;
   }
   @media (min-width: 1560px) {
     height: 500px;
@@ -78,27 +78,7 @@ const Description = styled.li`
   font-size: 18px;
   margin-bottom: 10px;
 `;
-const Resolucion = styled.li`
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-`;
-const Procesdaor = styled.li`
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-`;
-const Ram = styled.li`
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-`;
-const Sistema = styled.li`
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-`;
-const Almacenamiento = styled.li`
+const Item = styled.li`
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -175,11 +155,11 @@ const Product = () => {
 
           <Ul>
             <Description>{description}</Description>
-            <Resolucion>- Resolución: {pantalla}</Resolucion>
-            <Procesdaor>- Procesdaor: {procesador}</Procesdaor>
-            <Ram>- Ram: {ram}</Ram>
-            <Sistema>- Sistema Operativo: {sistema}</Sistema>
-            <Almacenamiento>- Almacenamiento: {almacenamiento}</Almacenamiento>
+            <Item>- Resolución: {pantalla}</Item>
+            <Item>- Procesdaor: {procesador}</Item>
+            <Item>- Ram: {ram}</Item>
+            <Item>- Sistema Operativo: {sistema}</Item>
+            <Item>- Almacenamiento: {almacenamiento}</Item>
           </Ul>
 
           <SectionButton>
