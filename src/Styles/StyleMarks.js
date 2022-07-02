@@ -60,6 +60,7 @@ export const StyleMarks = () => {
     @media (min-width: 760px) {
       overflow: hidden;
       overflow-y: hidden;
+      width: 95vw;
     }
   `;
 

@@ -22,7 +22,6 @@ export const StyleCategories = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   `;
 
   const Paragraph = styled.p`

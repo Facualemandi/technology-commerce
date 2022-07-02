@@ -8,6 +8,8 @@ import PlacasDeVideo from "../../Components/PlacasDeVideo";
 import Monitores from "../../Components/Monitores";
 
 const Home = () => {
+
+  
   return (
     <>
       <Nav />

@@ -7,6 +7,7 @@ export const StyleSlider = () => {
   const ContenedorDiv = styled.div`
     overflow: hidden;
     position: relative;
+    width: 100vw;
   `;
 
   const ContenedorSliderShow = styled.div`
@@ -48,8 +49,9 @@ export const StyleSlider = () => {
     position: absolute;
     z-index: 15;
     bottom: 0px;
-    width: 100vw;
+    width: 99vw;
     display: flex;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -104,6 +106,5 @@ export const StyleSlider = () => {
     Rigth,
     Left,
     Img,
-
   };
 };
