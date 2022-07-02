@@ -17,10 +17,9 @@ const PlacasDeVideo = () => {
       <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
 
       <SectionContianer>
+        {loaging && <Loader />}
         {placas.map((product) => (
           <>
-            {loaging && <Loader />}
-
             {!loaging && (
               <Section onClick={() => handleProduct(product)}>
                 <Img alt={product.name} src={product.img} />

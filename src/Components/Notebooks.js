@@ -25,10 +25,9 @@ const Notebooks = () => {
       <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
 
       <SectionContianer>
+        {loaging && <Loader />}
         {notebook.map((note) => (
           <>
-            {loaging && <Loader />}
-
             {!loaging && (
               <TheNavLink to={`/Notebook/${note.name}`}>
                 <Section onClick={() => handleProduct(note)}>

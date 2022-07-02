@@ -7,8 +7,8 @@ import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
   StyleHomeProducts();
 
-const Monitores = ({ loaging }) => {
-  const { monitores } = useProducts();
+const Monitores = () => {
+  const { monitores, loaging } = useProducts();
   const { handleProduct } = useAuth();
 
   return (
@@ -16,10 +16,9 @@ const Monitores = ({ loaging }) => {
       <Parragraph>Resolución al Máximo!</Parragraph>
 
       <SectionContianer>
+        {loaging && <Loader />}
         {monitores.map((product) => (
           <>
-            {loaging && <Loader />}
-
             {!loaging && (
               <Section onClick={() => handleProduct(product)}>
                 <Img alt={product.name} src={product.img} />
