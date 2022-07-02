@@ -11,6 +11,10 @@ export const StyleNav = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 1000;
   `;
 
   const IconBurger = styled(FiAlignLeft)`
@@ -39,6 +43,6 @@ export const StyleNav = () => {
   return {
     NavBar,
     IconBurger,
-    IconCart
+    IconCart,
   };
 };

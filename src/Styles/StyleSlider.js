@@ -24,6 +24,7 @@ export const StyleSlider = () => {
     max-height: 500px;
     font-family: "Monserrat", sans-serif;
     font-size: 14px;
+    margin-top: 60px;
 
     img {
       width: 100%;

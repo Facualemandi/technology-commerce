@@ -9,7 +9,7 @@ import Monitores from "../../Components/Monitores";
 
 const Home = () => {
 
-  
+
   return (
     <>
       <Nav />

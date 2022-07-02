@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {NavLink} from 'react-router-dom'
 
 export const StyleHomeProducts = () => {
   const Main = styled.main`
@@ -83,6 +84,11 @@ export const StyleHomeProducts = () => {
     margin-top: 10px;
   `;
 
+  const TheNavLink = styled(NavLink)`
+    text-decoration: none;
+    color: black;
+  `
+
   return {
     Main,
     Parragraph,
@@ -91,5 +97,6 @@ export const StyleHomeProducts = () => {
     NameProduct,
     Price,
     Img,
+    TheNavLink,
   };
 };

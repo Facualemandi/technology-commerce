@@ -1,4 +1,5 @@
 import React from "react";
+import { useAuth } from "../Context/authContext";
 import { useProducts } from "../Hooks/useProducts";
 import Loader from "../Loader/Loader";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
@@ -7,22 +8,23 @@ const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
   StyleHomeProducts();
 
 const Monitores = ({ loaging }) => {
-    const {monitores} = useProducts();
-    
+  const { monitores } = useProducts();
+  const { handleProduct } = useAuth();
+
   return (
     <Main>
       <Parragraph>Resolución al Máximo!</Parragraph>
 
       <SectionContianer>
-        {monitores.map((note) => (
+        {monitores.map((product) => (
           <>
             {loaging && <Loader />}
 
             {!loaging && (
-              <Section>
-                <Img alt={note.name} src={note.img} />
-                <Price>${note.price}</Price>
-                <NameProduct>{note.name}</NameProduct>
+              <Section onClick={() => handleProduct(product)}>
+                <Img alt={product.name} src={product.img} />
+                <Price>${product.price}</Price>
+                <NameProduct>{product.name}</NameProduct>
               </Section>
             )}
           </>
