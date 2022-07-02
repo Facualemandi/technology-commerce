@@ -24,6 +24,7 @@ const Img = styled.img`
   }
 `;
 const SectionImg = styled.section`
+  border-radius: 15px;
   width: 100vw;
   background: #8e9eab; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -111,6 +112,10 @@ const Button = styled.button`
   font-weight: bold;
   color: white;
   box-shadow: 0px 3px 5px 0px #6790efb7;
+  margin-top: 10px;
+  @media (min-width: 760px) {
+    cursor: pointer;
+  }
 `;
 
 const SectionButton = styled.section`
