@@ -22,10 +22,8 @@ const Notebooks = () => {
 
   return (
     <Main>
-      <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
-
+        <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
       <SectionContianer>
-        {loaging && <Loader />}
         {notebook.map((note) => (
           <>
             {!loaging && (

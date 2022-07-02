@@ -16,7 +16,6 @@ const Monitores = () => {
       <Parragraph>Resolución al Máximo!</Parragraph>
 
       <SectionContianer>
-        {loaging && <Loader />}
         {monitores.map((product) => (
           <>
             {!loaging && (

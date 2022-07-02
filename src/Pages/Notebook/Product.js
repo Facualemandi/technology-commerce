@@ -1,131 +1,109 @@
 import React from "react";
 import styled from "styled-components";
-import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
+import conectividad from "../../Images/IconsSvg/conectividada.png";
+import ssd from "../../Images/IconsSvg/ssd.png";
+import thePantalla from "../../Images/IconsSvg/monitor.png";
+import theRam from "../../Images/IconsSvg/ram.png";
+import theProcesador from "../../Images/IconsSvg/procesador.png";
+import theSistem from "../../Images/IconsSvg/window.png";
 
-const Img = styled.img`
-  width: 80vw;
-  height: 400px;
-  display: flex;
-  margin: auto;
-
-  @media (min-width: 760px) {
-    height: 300px;
-    width: 300px;
-  }
-
-  @media (min-width: 1260px) {
-    height: 400px;
-    width: 400px;
-  }
-  @media (min-width: 1560px) {
-    height: 500px;
-    width: 500px;
-  }
+const Main = styled.main`
+  width: 100vw;
 `;
 const SectionImg = styled.section`
-  border-radius: 15px;
   width: 100vw;
-  background: #8e9eab; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #eef2f3,
-    #8e9eab
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
-
-  @media (min-width: 760px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-const Main = styled.main`
-  margin-top: 60px;
+const Img = styled.img`
+  width: 300px;
+  height: 300px;
+`;
 
-  @media (min-width: 760px) {
-    display: flex;
-    width: 95vw;
-    margin: auto;
-    margin-top: 150px;
-    border: 1px solid grey;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  @media (min-width: 1260px) {
-    width: 80vw;
-  }
-  @media (min-width: 1560px) {
-    height: 500px;
-    width: 500px;
-    width: 60vw;
-  }
+const SectionName = styled.section`
+  width: 95vw;
+  margin: auto;
+  border-left: 5px solid #9fd3ab;
 `;
 
 const Name = styled.p`
-  font-family: "Montserrat", sans-serif;
   margin: 10px;
+  font-family: "Montserrat", sans-serif;
 `;
 const Price = styled.p`
-  font-family: "Montserrat", sans-serif;
-  color: black;
-  font-size: 33px;
   margin: 10px;
-`;
-
-const Description = styled.li`
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 24px;
 `;
-const Item = styled.li`
-  margin-bottom: 10px;
+const Description = styled.p`
+  margin: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 `;
 
+const SectionDescription = styled.section`
+  width: 95vw;
+  margin: auto;
+  border-left: 5px solid #a090d4;
+`;
+
+const SectionItems = styled.section`
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+`;
+
+const ImgSvg = styled.img`
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+`;
+
+const SectionNameItems = styled.section`
+  display: flex;
+  align-items: center;
+`;
+
+const ItemName = styled.p`
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+`;
+
 const Ul = styled.ul`
   list-style: none;
-  padding: 10px;
-  border-left: 5px solid #c08ee1;
-  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+`;
+const Li = styled.li`
+  margin: 5px;
+  margin-left: 50px;
 `;
 
-const SectionPriceName = styled.section`
-  border-left: 5px solid #76cb8b;
-  margin: 10px;
+const SectionButtom = styled.section`
+  width: 95vw;
+  margin: auto;
+  border-left: 5px solid #bce4ff;
 `;
-
-const Button = styled.button`
+const Buttom = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
   margin: auto;
   width: 300px;
   padding: 10px;
-  border: none;
   border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: #8babff;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  box-shadow: 0px 3px 5px 0px #6790efb7;
-  margin-top: 10px;
-  @media (min-width: 760px) {
-    cursor: pointer;
-  }
-`;
-
-const SectionButton = styled.section`
-  border-left: 5px solid #8babff;
-  margin: 10px;
-`;
-
-const SectionDesktop = styled.section`
-  display: flex;
-  flex-direction: column;
+  border: none;
+  background-color: #8bcfff;
+  margin-top: 25px;
+  box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
 `;
 
 const Product = () => {
@@ -143,34 +121,117 @@ const Product = () => {
     imgdesk,
   } = theNotebook;
 
-  console.log(theNotebook);
+  const storage = Object.values(almacenamiento);
+  const screen = Object.values(pantalla);
+  const processor = Object.values(procesador);
+  const memoryRam = Object.values(ram);
+  const sistem = Object.values(sistema);
+
+  console.log(storage, screen, processor, memoryRam, sistem);
+
   return (
     <>
-      <Nav />
       <Main>
         <SectionImg>
           <Img alt="" src={imgdesk} />
         </SectionImg>
 
-        <SectionDesktop>
-          <SectionPriceName>
-            <Name>{name}</Name>
-            <Price>${price}</Price>
-          </SectionPriceName>
+        <SectionName>
+          <Name>{name}</Name>
+          <Price>${price}</Price>
+          <Description>{description}</Description>
+        </SectionName>
 
-          <Ul>
-            <Description>{description}</Description>
-            <Item>- Resolución: {pantalla}</Item>
-            <Item>- Procesdaor: {procesador}</Item>
-            <Item>- Ram: {ram}</Item>
-            <Item>- Sistema Operativo: {sistema}</Item>
-            <Item>- Almacenamiento: {almacenamiento}</Item>
-          </Ul>
+        <SectionDescription>
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={ssd} />
+              <ItemName>Almacenamiento</ItemName>
+            </SectionNameItems>
 
-          <SectionButton>
-            <Button>Comprar</Button>
-          </SectionButton>
-        </SectionDesktop>
+            <Ul>
+              {storage.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={conectividad} />
+              <ItemName>Conectividad</ItemName>
+            </SectionNameItems>
+            <Ul>
+              {storage.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={theRam} />
+              <ItemName>Memoria Ram</ItemName>
+            </SectionNameItems>
+            <Ul>
+              {memoryRam.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={thePantalla} />
+              <ItemName>Pantalla</ItemName>
+            </SectionNameItems>
+            <Ul>
+              {screen.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={theProcesador} />
+              <ItemName>Procesador</ItemName>
+            </SectionNameItems>
+            <Ul>
+              {processor.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+
+          <SectionItems>
+            <SectionNameItems>
+              <ImgSvg alt="SSD" src={theSistem} />
+              <ItemName>Sistema Operativo</ItemName>
+            </SectionNameItems>
+            <Ul>
+              {sistem.map((item) => (
+                <Li>
+                  <p>{item}</p>
+                </Li>
+              ))}
+            </Ul>
+          </SectionItems>
+        </SectionDescription>
+
+        <SectionButtom>
+          <Buttom>Comprar</Buttom>
+        </SectionButtom>
       </Main>
     </>
   );

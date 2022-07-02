@@ -17,7 +17,6 @@ const PlacasDeVideo = () => {
       <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
 
       <SectionContianer>
-        {loaging && <Loader />}
         {placas.map((product) => (
           <>
             {!loaging && (
