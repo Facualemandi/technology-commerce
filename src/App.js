@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./Components/ScrollToTop";
 import { AuthProvider } from "./Context/authContext";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -9,12 +10,14 @@ function App() {
   return (
     <>
       <AuthProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Notebook/:name" element={<Product />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/Notebook/:name" element={<Product />} />
+          </Routes>
+        </ScrollToTop>
       </AuthProvider>
     </>
   );

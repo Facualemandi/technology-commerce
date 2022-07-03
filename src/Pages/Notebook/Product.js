@@ -9,6 +9,8 @@ import theProcesador from "../../Images/IconsSvg/procesador.png";
 import theSistem from "../../Images/IconsSvg/window.png";
 import Nav from "../../Components/Nav";
 import { NavLink } from "react-router-dom";
+import { BiMinus } from "react-icons/bi";
+import { MdAdd } from "react-icons/md";
 
 const Main = styled.main`
   width: 100vw;
@@ -139,6 +141,16 @@ const SectionButtom = styled.section`
   width: 95vw;
   margin: auto;
   border-left: 5px solid #bce4ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  @media (min-width: 780px) {
+    display: none;
+  }
 `;
 const Buttom = styled.button`
   display: flex;
@@ -148,7 +160,7 @@ const Buttom = styled.button`
   font-weight: bold;
   color: white;
   margin: auto;
-  width: 300px;
+  width: 90vw;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -156,6 +168,8 @@ const Buttom = styled.button`
   margin-top: 25px;
   box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
   margin-bottom: 30px;
+  height: 54px;
+  margin-left: 10px;
 
   @media (min-width: 780px) {
     display: none;
@@ -173,7 +187,6 @@ const ButtomDesktop = styled.button`
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: white;
-    margin: auto;
     width: 300px;
     padding: 10px;
     border-radius: 5px;
@@ -235,6 +248,38 @@ const ParragraphRerutn = styled.p`
       transition: 0.5s;
     }
   }
+`;
+
+const SectionAmount = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: auto;
+  width: 90vw;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
+  height: 54px;
+  margin-left: 10px;
+  background-color: #ffd095;
+`;
+
+const Amount = styled.p`
+  margin: 10px;
+  font-family: sans-serif;
+  font-size: 28px;
+`;
+
+const Add = styled(MdAdd)`
+  width: 90%;
+  height: 40px;
+`;
+const Minus = styled(BiMinus)`
+  width: 90%;
+  height: 40px;
 `;
 
 const Product = () => {
@@ -371,6 +416,11 @@ const Product = () => {
 
         <SectionButtom>
           <Buttom>Comprar</Buttom>
+          <SectionAmount>
+            <Minus>Minus</Minus>
+            <Amount>0</Amount>
+            <Add>More</Add>
+          </SectionAmount>
         </SectionButtom>
       </Main>
     </>
