@@ -42,23 +42,33 @@ const SectionName = styled.section`
   border-left: 5px solid #9fd3ab;
 
   @media (min-width: 780px) {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgba(197, 197, 197, 0.652);
   }
 `;
 
 const Name = styled.p`
   margin: 10px;
   font-family: "Montserrat", sans-serif;
+  @media (min-width: 760px) {
+    font-size: 25px;
+  }
 `;
 const Price = styled.p`
   margin: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
+  @media (min-width: 760px) {
+    font-size: 30px;
+  }
 `;
 const Description = styled.p`
   margin: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+
+  @media (min-width: 760px) {
+    font-size: 18px;
+  }
 `;
 
 const SectionDescription = styled.section`
@@ -89,7 +99,7 @@ const SectionItems = styled.section`
   margin: auto;
 
   @media (min-width: 760px) {
-   min-height: 151px;
+    min-height: 151px;
   }
 `;
 
@@ -227,7 +237,6 @@ const Product = () => {
         </SectionDesktopNotebook>
 
         <SectionDescription>
-
           <SectionItems>
             <SectionNameItems>
               <ImgSvg alt="SSD" src={ssd} />
