@@ -8,6 +8,7 @@ import theRam from "../../Images/IconsSvg/ram.png";
 import theProcesador from "../../Images/IconsSvg/procesador.png";
 import theSistem from "../../Images/IconsSvg/window.png";
 import Nav from "../../Components/Nav";
+import { NavLink } from "react-router-dom";
 
 const Main = styled.main`
   width: 100vw;
@@ -154,6 +155,7 @@ const Buttom = styled.button`
   background-color: #8bcfff;
   margin-top: 25px;
   box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
+  margin-bottom: 30px;
 
   @media (min-width: 780px) {
     display: none;
@@ -195,6 +197,46 @@ const SectionDesktopNotebook = styled.section`
   }
 `;
 
+const Return = styled(NavLink)`
+  @media (min-width: 760px) {
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    margin: auto;
+    width: 65vw;
+  }
+`;
+
+const ParragraphRerutn = styled.p`
+  border: 1px solid;
+  padding: 5px;
+  position: fixed;
+  right: 10px;
+  top: 75px;
+  border-radius: 5px;
+  background-color: #d3edff;
+  border: 3px solid #bde1fa;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+
+  @media (min-width: 760px) {
+    border: 3px solid #9ed6ff;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-weight: bold;
+    color: black;
+
+    &&:hover {
+      background-color: #bce4ff;
+      transition: 0.5s;
+    }
+  }
+`;
+
 const Product = () => {
   const { theNotebook } = useAuth();
 
@@ -222,6 +264,10 @@ const Product = () => {
     <>
       <Nav />
       <Main>
+        <Return to={"/Home"}>
+          <ParragraphRerutn>Volver</ParragraphRerutn>
+        </Return>
+
         <SectionDesktopNotebook>
           <SectionImg>
             <Img alt="" src={imgdesk} />

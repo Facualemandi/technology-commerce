@@ -11,7 +11,6 @@ const MenuNavDesktop = () => {
     <Section>
       <Buttom onClick={handleLogOut}>Cerrar Sesion</Buttom>
       <Ul>
-        <Li>Volver</Li>
         <Li>Notebooks</Li>
         <Li>Perifericos</Li>
         <Li>Placas de Video</Li>
