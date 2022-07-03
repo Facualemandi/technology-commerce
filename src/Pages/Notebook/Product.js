@@ -7,25 +7,43 @@ import thePantalla from "../../Images/IconsSvg/monitor.png";
 import theRam from "../../Images/IconsSvg/ram.png";
 import theProcesador from "../../Images/IconsSvg/procesador.png";
 import theSistem from "../../Images/IconsSvg/window.png";
+import Nav from "../../Components/Nav";
 
 const Main = styled.main`
   width: 100vw;
+  margin-top: 60px;
 `;
 const SectionImg = styled.section`
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 780px) {
+  }
 `;
 const Img = styled.img`
   width: 300px;
   height: 300px;
+
+  @media (min-width: 780px) {
+    width: 400px;
+    height: 400px;
+  }
+  @media (min-width: 1240px) {
+    width: 500px;
+    height: 500px;
+  }
 `;
 
 const SectionName = styled.section`
   width: 95vw;
   margin: auto;
   border-left: 5px solid #9fd3ab;
+
+  @media (min-width: 780px) {
+    border-left: 1px solid grey;
+  }
 `;
 
 const Name = styled.p`
@@ -47,6 +65,20 @@ const SectionDescription = styled.section`
   width: 95vw;
   margin: auto;
   border-left: 5px solid #a090d4;
+
+  @media (min-width: 780px) {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    border-top: 1px solid rgba(197, 197, 197, 0.652);
+    border-left: none;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, 350px);
+  }
+  @media (min-width: 1270px) {
+    grid-template-columns: repeat(4, 320px);
+    width: 1300px;
+  }
 `;
 
 const SectionItems = styled.section`
@@ -55,6 +87,10 @@ const SectionItems = styled.section`
   display: flex;
   flex-direction: column;
   margin: auto;
+
+  @media (min-width: 760px) {
+   min-height: 151px;
+  }
 `;
 
 const ImgSvg = styled.img`
@@ -66,6 +102,10 @@ const ImgSvg = styled.img`
 const SectionNameItems = styled.section`
   display: flex;
   align-items: center;
+
+  @media (min-width: 780px) {
+    width: max-content;
+  }
 `;
 
 const ItemName = styled.p`
@@ -104,6 +144,45 @@ const Buttom = styled.button`
   background-color: #8bcfff;
   margin-top: 25px;
   box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
+
+  @media (min-width: 780px) {
+    display: none;
+  }
+`;
+
+const ButtomDesktop = styled.button`
+  display: none;
+
+  @media (min-width: 780px) {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #8bcfff;
+    margin-top: 25px;
+    box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
+    cursor: pointer;
+  }
+`;
+
+const SectionDesktopNotebook = styled.section`
+  @media (min-width: 780px) {
+    width: 95vw;
+    margin: auto;
+    display: flex;
+  }
+
+  @media (min-width: 1300px) {
+    width: 1300px;
+  }
 `;
 
 const Product = () => {
@@ -131,18 +210,24 @@ const Product = () => {
 
   return (
     <>
+      <Nav />
       <Main>
-        <SectionImg>
-          <Img alt="" src={imgdesk} />
-        </SectionImg>
+        <SectionDesktopNotebook>
+          <SectionImg>
+            <Img alt="" src={imgdesk} />
+          </SectionImg>
 
-        <SectionName>
-          <Name>{name}</Name>
-          <Price>${price}</Price>
-          <Description>{description}</Description>
-        </SectionName>
+          <SectionName>
+            <Name>{name}</Name>
+            <Price>${price}</Price>
+            <Description>{description}</Description>
+
+            <ButtomDesktop>Comprar</ButtomDesktop>
+          </SectionName>
+        </SectionDesktopNotebook>
 
         <SectionDescription>
+
           <SectionItems>
             <SectionNameItems>
               <ImgSvg alt="SSD" src={ssd} />
