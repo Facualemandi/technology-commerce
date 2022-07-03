@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 export const StyleHomeProducts = () => {
   const Main = styled.main`
@@ -30,7 +30,7 @@ export const StyleHomeProducts = () => {
     border: 1px solid #e0e0e0a9;
     border-radius: 10px;
     height: auto;
-    width: 90%;
+    width: 95%;
     margin: 10px;
   `;
 
@@ -55,11 +55,8 @@ export const StyleHomeProducts = () => {
   const Img = styled.img`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    width: 100%;
-    height: 185px;
-    background: #9da5bd;
-    background: -webkit-linear-gradient(to top, #e1e6ef, #9da5bd);
-    background: linear-gradient(to top, #e1e6ef, #9da5bd);
+    width: 130px;
+    height: 130px;
   `;
 
   const NameProduct = styled.p`
@@ -87,7 +84,18 @@ export const StyleHomeProducts = () => {
   const TheNavLink = styled(NavLink)`
     text-decoration: none;
     color: black;
-  `
+  `;
+
+const SectionImg = styled.section`
+display: flex;
+justify-content: center;
+align-items: center;
+background: #bdc3c7;
+background: -webkit-linear-gradient(to top, #d6d6d6, #ffffff);
+background: linear-gradient(to top, #d6d6d6, #ffffff);
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+`;
 
   return {
     Main,
@@ -98,5 +106,6 @@ export const StyleHomeProducts = () => {
     Price,
     Img,
     TheNavLink,
+    SectionImg,
   };
 };

@@ -1,9 +1,7 @@
 import React from "react";
 import { useAuth } from "../Context/authContext";
 import { useProducts } from "../Hooks/useProducts";
-import Loader from "../Loader/Loader";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
-import { NavLink } from "react-router-dom";
 
 const {
   Main,
@@ -14,6 +12,7 @@ const {
   Price,
   Img,
   TheNavLink,
+  SectionImg,
 } = StyleHomeProducts();
 
 const Notebooks = () => {
@@ -22,14 +21,16 @@ const Notebooks = () => {
 
   return (
     <Main>
-        <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
+      <Parragraph>Elegí la mejor Notebook para trabajar o jugar!</Parragraph>
       <SectionContianer>
         {notebook.map((note) => (
           <>
             {!loaging && (
               <TheNavLink to={`/Notebook/${note.name}`}>
                 <Section onClick={() => handleProduct(note)}>
-                  <Img alt={note.name} src={note.img} />
+                  <SectionImg>
+                    <Img alt={note.name} src={note.img} />
+                  </SectionImg>
                   <Price>${note.price}</Price>
                   <NameProduct>{note.name}</NameProduct>
                 </Section>

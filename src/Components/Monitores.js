@@ -4,8 +4,16 @@ import { useProducts } from "../Hooks/useProducts";
 import Loader from "../Loader/Loader";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 
-const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
-  StyleHomeProducts();
+const {
+  Main,
+  Parragraph,
+  Section,
+  SectionContianer,
+  NameProduct,
+  Price,
+  Img,
+  SectionImg,
+} = StyleHomeProducts();
 
 const Monitores = () => {
   const { monitores, loaging } = useProducts();
@@ -20,7 +28,9 @@ const Monitores = () => {
           <>
             {!loaging && (
               <Section onClick={() => handleProduct(product)}>
-                <Img alt={product.name} src={product.img} />
+                <SectionImg>
+                  <Img alt={product.name} src={product.img} />
+                </SectionImg>
                 <Price>${product.price}</Price>
                 <NameProduct>{product.name}</NameProduct>
               </Section>

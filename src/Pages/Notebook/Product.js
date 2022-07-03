@@ -164,7 +164,7 @@ const Buttom = styled.button`
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #8bcfff;
+  background-color: #8babff;
   margin-top: 25px;
   box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
   margin-bottom: 30px;
@@ -264,7 +264,8 @@ const SectionAmount = styled.section`
   box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
   height: 54px;
   margin-left: 10px;
-  background-color: #ffd095;
+  background-color: #8babff;
+  color: white;
 `;
 
 const Amount = styled.p`

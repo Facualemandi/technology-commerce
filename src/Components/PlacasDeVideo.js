@@ -1,12 +1,13 @@
 import React from "react";
 import { useAuth } from "../Context/authContext";
 import { useProducts } from "../Hooks/useProducts";
-import Loader from "../Loader/Loader";
-
+import styled from "styled-components";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 
-const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img } =
+const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img,SectionImg } =
   StyleHomeProducts();
+
+
 
 const PlacasDeVideo = () => {
   const { placas, loaging } = useProducts();
@@ -21,7 +22,9 @@ const PlacasDeVideo = () => {
           <>
             {!loaging && (
               <Section onClick={() => handleProduct(product)}>
-                <Img alt={product.name} src={product.img} />
+                <SectionImg>
+                  <Img alt={product.name} src={product.img} />
+                </SectionImg>
                 <Price>${product.price}</Price>
                 <NameProduct>{product.name}</NameProduct>
               </Section>
