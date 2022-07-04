@@ -36,8 +36,8 @@ const {
   Minus,
 } = StyleProduct();
 
-const Product = () => {
-  const { theNotebook } = useAuth();
+const Notebook = () => {
+  const { producto } = useAuth();
 
   const {
     almacenamiento,
@@ -49,7 +49,7 @@ const Product = () => {
     ram,
     sistema,
     imgdesk,
-  } = theNotebook;
+  } = producto;
 
   const storage = Object.values(almacenamiento);
   const screen = Object.values(pantalla);
@@ -69,7 +69,7 @@ const Product = () => {
 
         <SectionDesktopNotebook>
           <SectionImg>
-            <Img alt="" src={imgdesk} />
+            <Img alt="Notebook" src={imgdesk} />
           </SectionImg>
 
           <SectionName>
@@ -181,4 +181,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Notebook;

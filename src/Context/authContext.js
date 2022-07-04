@@ -19,7 +19,7 @@ export const useAuth = () => {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [theNotebook, setTheNotebook] = useState([])
+  const [producto, setProducto] = useState([])
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -45,14 +45,14 @@ export function AuthProvider({ children }) {
     });
   }, [user]);
 
-  const handleProduct = (note) => {
-    console.log(note);
-    setTheNotebook(note)
+  const handleProduct = (product) => {
+    console.log(product);
+    setProducto(product)
   };
 
   return (
     <authContext.Provider
-      value={{ signUp, login, user, logAut, logInWithGoogle, handleProduct, theNotebook}}
+      value={{ signUp, login, user, logAut, logInWithGoogle, handleProduct, producto}}
     >
       {children}
     </authContext.Provider>

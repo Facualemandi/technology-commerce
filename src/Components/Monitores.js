@@ -13,6 +13,7 @@ const {
   Price,
   Img,
   SectionImg,
+  TheNavLink,
 } = StyleHomeProducts();
 
 const Monitores = () => {
@@ -27,13 +28,15 @@ const Monitores = () => {
         {monitores.map((product) => (
           <>
             {!loaging && (
-              <Section onClick={() => handleProduct(product)}>
-                <SectionImg>
-                  <Img alt={product.name} src={product.img} />
-                </SectionImg>
-                <Price>${product.price}</Price>
-                <NameProduct>{product.name}</NameProduct>
-              </Section>
+              <TheNavLink to={`/Monitor/${product.name}`}>
+                <Section onClick={() => handleProduct(product)}>
+                  <SectionImg>
+                    <Img alt={product.name} src={product.img} />
+                  </SectionImg>
+                  <Price>${product.price}</Price>
+                  <NameProduct>{product.name}</NameProduct>
+                </Section>
+              </TheNavLink>
             )}
           </>
         ))}

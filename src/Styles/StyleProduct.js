@@ -185,6 +185,7 @@ export const StyleProduct = () => {
       border-radius: 5px;
       border: none;
       background-color: #8bcfff;
+      margin: 10px;
       margin-top: 25px;
       box-shadow: 0px 4px 5px 0px rgba(175, 175, 175, 0.594);
       cursor: pointer;

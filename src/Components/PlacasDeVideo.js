@@ -4,10 +4,17 @@ import { useProducts } from "../Hooks/useProducts";
 import styled from "styled-components";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 
-const { Main, Parragraph, Section, SectionContianer, NameProduct, Price, Img,SectionImg } =
-  StyleHomeProducts();
-
-
+const {
+  Main,
+  Parragraph,
+  Section,
+  SectionContianer,
+  NameProduct,
+  Price,
+  Img,
+  SectionImg,
+  TheNavLink,
+} = StyleHomeProducts();
 
 const PlacasDeVideo = () => {
   const { placas, loaging } = useProducts();
@@ -21,13 +28,15 @@ const PlacasDeVideo = () => {
         {placas.map((product) => (
           <>
             {!loaging && (
-              <Section onClick={() => handleProduct(product)}>
-                <SectionImg>
-                  <Img alt={product.name} src={product.img} />
-                </SectionImg>
-                <Price>${product.price}</Price>
-                <NameProduct>{product.name}</NameProduct>
-              </Section>
+              <TheNavLink to={`/PlacaDeVideo/${product.name}`}>
+                <Section onClick={() => handleProduct(product)}>
+                  <SectionImg>
+                    <Img alt={product.name} src={product.img} />
+                  </SectionImg>
+                  <Price>${product.price}</Price>
+                  <NameProduct>{product.name}</NameProduct>
+                </Section>
+              </TheNavLink>
             )}
           </>
         ))}
