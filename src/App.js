@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Cart from "./Components/Cart";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AuthProvider } from "./Context/authContext";
 import Home from "./Pages/Home/Home";
@@ -20,6 +21,7 @@ function App() {
             <Route path="/Notebook/:name" element={<Notebook />} />
             <Route path="/PlacaDeVideo/:name" element={<PlacaDeVideo />} />
             <Route path="/Monitor/:name" element={<MonitorDescript />} />
+            <Route path="/Cart" element={<Cart />}/>
           </Routes>
         </ScrollToTop>
       </AuthProvider>

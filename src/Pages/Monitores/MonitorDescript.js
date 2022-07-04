@@ -46,7 +46,7 @@ const Caracteristica = styled.p`
 `;
 
 const MonitorDescript = () => {
-  const { producto } = useAuth();
+  const { producto, amount, addAmount, deleteAmount } = useAuth();
 
   const {
     almacenamiento,
@@ -93,9 +93,9 @@ const MonitorDescript = () => {
         <SectionButtom>
           <Buttom>Comprar</Buttom>
           <SectionAmount>
-            <Minus>Minus</Minus>
-            <Amount>0</Amount>
-            <Add>More</Add>
+            <Minus onClick={deleteAmount}>Minus</Minus>
+            <Amount>{amount}</Amount>
+            <Add onClick={addAmount}>More</Add>
           </SectionAmount>
         </SectionButtom>
       </Main>

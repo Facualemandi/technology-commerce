@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
@@ -46,7 +46,7 @@ const Caracteristica = styled.p`
 `;
 
 const PlacaDeVideo = () => {
-  const { producto } = useAuth();
+  const { producto, amount, addAmount, deleteAmount } = useAuth();
 
   const {
     almacenamiento,
@@ -92,9 +92,9 @@ const PlacaDeVideo = () => {
         <SectionButtom>
           <Buttom>Comprar</Buttom>
           <SectionAmount>
-            <Minus>Minus</Minus>
-            <Amount>0</Amount>
-            <Add>More</Add>
+            <Minus onClick={deleteAmount}>Minus</Minus>
+            <Amount>{amount}</Amount>
+            <Add onClick={addAmount}>More</Add>
           </SectionAmount>
         </SectionButtom>
       </Main>

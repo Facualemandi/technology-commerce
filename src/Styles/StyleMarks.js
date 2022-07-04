@@ -39,7 +39,7 @@ export const StyleMarks = () => {
     }
 
     @media (min-width: 1080px) {
-      width: 1080px;
+      width: 1250px;
       overflow-y: hidden;
       overflow-x: hidden;
     }
@@ -47,11 +47,11 @@ export const StyleMarks = () => {
 
   const MarksImages = styled.section`
     margin: 15px;
-    width: 190px;
-    height: 235px;
+    width: 230px;
+    height: 200px;
     position: relative;
     border-radius: 10px;
-    background-color: #e0e0e0a9;
+    box-shadow: 0px 0px 7px 0px rgba(196, 196, 196, 0.657);
   `;
 
   const Main = styled.main`
@@ -65,8 +65,8 @@ export const StyleMarks = () => {
   `;
 
   const Image = styled.img`
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 120px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   `;
@@ -77,7 +77,7 @@ export const StyleMarks = () => {
     border-radius: 100%;
     position: absolute;
     bottom: 45px;
-    left: 35px;
+    left: 50px;
   `;
 
   const Mark = styled.p`

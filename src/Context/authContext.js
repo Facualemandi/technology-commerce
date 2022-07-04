@@ -19,7 +19,9 @@ export const useAuth = () => {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [producto, setProducto] = useState([])
+  const [producto, setProducto] = useState([]);
+  const [productCart, setProductCart] = useState([]);
+  const [amount, setAmount] = useState(0);
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -46,13 +48,32 @@ export function AuthProvider({ children }) {
   }, [user]);
 
   const handleProduct = (product) => {
-    console.log(product);
-    setProducto(product)
+    setProducto(product);
+  };
+
+  const addAmount = () => {
+    setAmount(amount + 1);
+  };
+  const deleteAmount = () => {
+    if (amount > 0) {
+      setAmount(amount - 1);
+    }
   };
 
   return (
     <authContext.Provider
-      value={{ signUp, login, user, logAut, logInWithGoogle, handleProduct, producto}}
+      value={{
+        signUp,
+        login,
+        user,
+        logAut,
+        logInWithGoogle,
+        handleProduct,
+        producto,
+        amount,
+        addAmount,
+        deleteAmount,
+      }}
     >
       {children}
     </authContext.Provider>
