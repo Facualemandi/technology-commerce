@@ -23,7 +23,6 @@ const PlacasDeVideo = () => {
   return (
     <Main>
       <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
-
       <SectionContianer>
         {placas.map((product) => (
           <>

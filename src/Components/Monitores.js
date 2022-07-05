@@ -23,7 +23,6 @@ const Monitores = () => {
   return (
     <Main>
       <Parragraph>Resolución al Máximo!</Parragraph>
-
       <SectionContianer>
         {monitores.map((product) => (
           <>

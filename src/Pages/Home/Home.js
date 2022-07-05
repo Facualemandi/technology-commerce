@@ -6,6 +6,7 @@ import Notebooks from "../../Components/Notebooks";
 import SliderShow from "../../Components/SliderShow";
 import PlacasDeVideo from "../../Components/PlacasDeVideo";
 import Monitores from "../../Components/Monitores";
+import ProductsHome from "../../Components/ProductsHome";
 
 const Home = () => {
 
@@ -16,9 +17,10 @@ const Home = () => {
       <SliderShow />
       <Marks />
       <Categories />
-      <Notebooks />
+      <ProductsHome/>
+      {/* <Notebooks />
       <PlacasDeVideo />
-      <Monitores />
+      <Monitores /> */}
     </>
   );
 };
