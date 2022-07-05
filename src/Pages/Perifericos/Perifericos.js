@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import ButtomReturn from "../../Components/ButtomReturn";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
 import { useProducts } from "../../Hooks/useProducts";
@@ -38,15 +39,16 @@ const Perifericos = () => {
   return (
     <>
       <Nav />
-      <Parraagraph>
-       Encontrá lo que buscas!
-      </Parraagraph>
+      <Parraagraph>Encontrá lo que buscas!</Parraagraph>
       <SectionContianer>
         {loaging && <Loader />}
         {perifericos.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/DescriptionPerifericos/${product.name}`} key={product.id}>
+              <TheNavLink
+                to={`/DescriptionPerifericos/${product.name}`}
+                key={product.id}
+              >
                 <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
                     <Img alt={product.name} src={product.img} />
@@ -58,6 +60,7 @@ const Perifericos = () => {
             )}
           </>
         ))}
+        <ButtomReturn />
       </SectionContianer>
     </>
   );

@@ -13,11 +13,12 @@ import RedDragonRounder from "../Images/RedDragonRounder.jpg";
 import NvidiaRounder from "../Images/NvidiaRounder.jpg";
 import { StyleMarks } from "../Styles/StyleMarks";
 
+
 const { Parragraph, Section, MarksImages, Main, Image, ImageRounder, Mark } =
   StyleMarks();
 
 
-  
+
 const Marks = () => {
   return (
     <Main>

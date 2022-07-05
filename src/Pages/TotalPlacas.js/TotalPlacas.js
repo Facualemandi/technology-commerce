@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import ButtomReturn from "../../Components/ButtomReturn";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
 import { useProducts } from "../../Hooks/useProducts";
@@ -62,6 +63,7 @@ const TotalPlacas = () => {
             )}
           </>
         ))}
+        <ButtomReturn />
       </SectionContianer>
     </>
   );
