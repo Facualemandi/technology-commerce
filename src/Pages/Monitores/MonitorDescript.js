@@ -50,7 +50,6 @@ const MonitorDescript = () => {
     useAuth();
 
   const { description, name, id, price, imgdesk, especificaciones } = producto;
-
   const items = Object.values(especificaciones);
 
  

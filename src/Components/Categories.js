@@ -13,17 +13,19 @@ const Categories = () => {
   return (
     <>
       <Main>
-        <Section>
-          <Image alt="Microprocesador" src={PlacasDeVideo} />
-          <Paragraph>Placas de Video</Paragraph>
-        </Section>
+        <NavLink to={"/PlacasDeVideo"}>
+          <Section>
+            <Image alt="Microprocesador" src={PlacasDeVideo} />
+            <Paragraph>Placas de Video</Paragraph>
+          </Section>
+        </NavLink>
 
         <Section>
           <Image alt="Microprocesador" src={Microprocesadores} />
           <Paragraph>Procesadores</Paragraph>
         </Section>
 
-        <NavLink to={'/Notebooks'}>
+        <NavLink to={"/Notebooks"}>
           <Section>
             <Image alt="Microprocesador" src={Notebooks} />
             <Paragraph>Notebooks</Paragraph>
