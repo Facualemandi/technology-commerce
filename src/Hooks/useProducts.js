@@ -9,7 +9,8 @@ export const useProducts = () => {
     const [monitores, setMonitores] = useState([]);
 
     const [isPageNotebook, setIsPageNotebook] = useState([]);
-    const [isPagePlacas, setIsPagePlacas] = useState([])
+    const [isPagePlacas, setIsPagePlacas] = useState([]);
+    const [isPageMonitor, setIsPageMonitor] = useState([]);
     
     const [loaging, setLoaging] = useState(false);
 
@@ -18,6 +19,7 @@ export const useProducts = () => {
     const productsMonitores = collection(db, "Monitores");
     const totalNotebooks = collection(db, "TotalNotebook");
     const totalPlacas = collection(db, 'TotalPlacas');
+    const totalMonitores = collection(db, 'TotalMonitores')
 
     const getProducts = async () => {
         setLoaging(true);
@@ -25,12 +27,14 @@ export const useProducts = () => {
         const placas = await getDocs(productsPlacas);
         const monitores = await getDocs(productsMonitores);
         const pageNotebooks = await getDocs(totalNotebooks);
-        const pagePlacas = await getDocs(totalPlacas)
+        const pagePlacas = await getDocs(totalPlacas);
+        const pageMonitores = await getDocs(totalMonitores)
         setNotebook(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         setPlacas(placas.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         setMonitores(monitores.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        setIsPageNotebook(pageNotebooks.docs.map((doc) => ({...doc.data(), id: doc.id})))
-        setIsPagePlacas(pagePlacas.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        setIsPageNotebook(pageNotebooks.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        setIsPagePlacas(pagePlacas.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        setIsPageMonitor(pageMonitores.docs.map((doc) => ({...doc.data(), id: doc.id})));
         setLoaging(false);
       };
 
@@ -46,5 +50,7 @@ export const useProducts = () => {
     loaging,
     isPageNotebook,
     isPagePlacas,
+    isPageMonitor,
+    
   }
 }

@@ -8,6 +8,7 @@ import MonitorDescript from "./Pages/Monitores/MonitorDescript";
 import Notebook from "./Pages/Notebook/Notebook";
 import PlacaDeVideo from "./Pages/PlacaDeVideo/PlacaDeVideo";
 import Register from "./Pages/Register/Register";
+import TotalMonitores from "./Pages/TotalMonitores.js/TotalMonitores";
 import TotalNotebooks from "./Pages/TotalNotebooks/TotalNotebooks";
 import TotalPlacas from "./Pages/TotalPlacas.js/TotalPlacas";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Notebooks" element={<TotalNotebooks />} />
             <Route path="/PlacasDeVideo" element={<TotalPlacas/>} />
+            <Route path="/Monitores" element={<TotalMonitores/>}/>
 
           </Routes>
         </ScrollToTop>

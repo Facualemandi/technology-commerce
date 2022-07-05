@@ -37,10 +37,12 @@ const Categories = () => {
           <Paragraph>Perifericos</Paragraph>
         </Section>
 
-        <Section>
-          <Image alt="Microprocesador" src={Monitores} />
-          <Paragraph>Monitores</Paragraph>
-        </Section>
+        <NavLink to={"/Monitores"}>
+          <Section>
+            <Image alt="Microprocesador" src={Monitores} />
+            <Paragraph>Monitores</Paragraph>
+          </Section>
+        </NavLink>
       </Main>
     </>
   );
