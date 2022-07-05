@@ -38,7 +38,6 @@ export function AuthProvider({ children }) {
 
   const logAut = () => {
     signOut(auth);
-    console.log(user);
   };
 
   useEffect(() => {

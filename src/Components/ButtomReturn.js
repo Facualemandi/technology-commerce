@@ -11,18 +11,17 @@ const Return = styled(FcLeft)`
   height: 50px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 0px rgba(193, 193, 193, 0.667);
-  border: 3px solid #d8d9da;
-  background-color: #d2d3d4;
   cursor: pointer;
+  background-color: #f8f8f8;
+  display: flex;
+  margin: auto;
 `;
-
-
 
 const ButtomReturn = () => {
   return (
     <>
-      <NavLink to={'/Home'}>
-        <Return>Facu</Return>
+      <NavLink to={"/Home"}>
+        <Return>Volver</Return>
       </NavLink>
     </>
   );

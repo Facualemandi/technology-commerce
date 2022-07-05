@@ -71,10 +71,9 @@ function TotalMonitores() {
               </TheNavLink>
             )}
           </>
-        ))}  
-
-        <ButtomReturn/>
+        ))}
       </SectionContianer>
+      <ButtomReturn />
     </>
   );
 }

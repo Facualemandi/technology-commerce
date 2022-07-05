@@ -4,15 +4,19 @@ import Marks from "../../Components/Marks";
 import Nav from "../../Components/Nav";
 import SliderShow from "../../Components/SliderShow";
 import ProductsHome from "../../Components/ProductsHome";
+import { useAuth } from "../../Context/authContext";
+import { ProtectRoute } from "../../Components/ProtectRoute";
 
 const Home = () => {
   return (
     <>
-      <Nav />
-      <SliderShow />
-      <Marks />
-      <Categories />
-      <ProductsHome />
+      <ProtectRoute>
+        <Nav />
+        <SliderShow />
+        <Marks />
+        <Categories />
+        <ProductsHome />
+      </ProtectRoute>
     </>
   );
 };
