@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Nav from "../../Components/Nav";
@@ -22,6 +21,7 @@ const Parraagraph = styled.p`
   margin: auto;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 15px;
   font-family: "Montserrat";
   font-size: 20px;
@@ -30,25 +30,23 @@ const Parraagraph = styled.p`
   margin-top: 70px;
 `;
 
-const TotalNotebooks = () => {
-  const [allNotebooks, setAllNotebooks] = useState([]);
-  const { notebook, isPageNotebook, loaging } = useProducts();
-  const { handleProduct } = useAuth();
+const Perifericos = () => {
+  const { perifericos, loaging } = useProducts();
 
-  useEffect(() => {
-    setAllNotebooks([...notebook, ...isPageNotebook]);
-  }, [isPageNotebook, notebook]);
+  const { handleProduct } = useAuth();
 
   return (
     <>
       <Nav />
-      <Parraagraph>Las mejores Notebooks al mejor precio!</Parraagraph>
+      <Parraagraph>
+       Encontrá lo que buscas!
+      </Parraagraph>
       <SectionContianer>
         {loaging && <Loader />}
-        {allNotebooks.map((product) => (
+        {perifericos.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Notebook/${product.name}`} key={product.id}>
+              <TheNavLink to={`/Perifericos/${product.name}`} key={product.id}>
                 <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
                     <Img alt={product.name} src={product.img} />
@@ -65,4 +63,4 @@ const TotalNotebooks = () => {
   );
 };
 
-export default TotalNotebooks;
+export default Perifericos;

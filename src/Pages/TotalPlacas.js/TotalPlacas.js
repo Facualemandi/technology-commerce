@@ -47,16 +47,16 @@ const TotalPlacas = () => {
       </Parraagraph>
       <SectionContianer>
         {loaging && <Loader />}
-        {allPlacas.map((placa) => (
+        {allPlacas.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/PlacaDeVideo/${placa.name}`}>
-                <Section onClick={() => handleProduct(placa)}>
+              <TheNavLink to={`/PlacaDeVideo/${product.name}`} key={product.id}>
+                <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
-                    <Img alt={placa.name} src={placa.img} />
+                    <Img alt={product.name} src={product.img} />
                   </SectionImg>
-                  <Price>${placa.price}</Price>
-                  <NameProduct>{placa.name}</NameProduct>
+                  <Price>${product.price}</Price>
+                  <NameProduct>{product.name}</NameProduct>
                 </Section>
               </TheNavLink>
             )}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
@@ -29,39 +29,35 @@ const Parraagraph = styled.p`
   margin-top: 70px;
 `;
 
-function TotalMonitores() {
-  const [allMonitores, setAllMonitores] = useState([])
-  const { monitores, isPageMonitor, loaging } = useProducts();
+const Microprocesadores = () => {
+  const { procesadores, loaging } = useProducts();
   const { handleProduct } = useAuth();
-
-  useEffect(() => {
-    setAllMonitores([...monitores, ...isPageMonitor]);
-  }, [isPageMonitor, monitores]);
 
   return (
     <>
       <Nav />
-      <Parraagraph>Las mejores Notebooks al mejor precio!</Parraagraph>
+
+      <Parraagraph>Micro-Procesadores</Parraagraph>
       <SectionContianer>
         {loaging && <Loader />}
-        {allMonitores.map((mon) => (
+        {procesadores.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Monitor/${mon.name}`} key={mon.id}>
-                <Section onClick={() => handleProduct(mon)}>
-                  <SectionImg>
-                    <Img alt={mon.name} src={mon.img} />
-                  </SectionImg>
-                  <Price>${mon.price}</Price>
-                  <NameProduct>{mon.name}</NameProduct>
-                </Section>
-              </TheNavLink>
+             <TheNavLink to={`/Procesador/${product.id}`} key={product.id}>
+             <Section onClick={() => handleProduct(product)}>
+               <SectionImg>
+                 <Img alt={product.name} src={product.img} />
+               </SectionImg>
+               <Price>${product.price}</Price>
+               <NameProduct>{product.name}</NameProduct>
+             </Section>
+           </TheNavLink>
             )}
           </>
         ))}
       </SectionContianer>
     </>
   );
-}
+};
 
-export default TotalMonitores;
+export default Microprocesadores;

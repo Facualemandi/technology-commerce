@@ -20,10 +20,12 @@ const Categories = () => {
           </Section>
         </NavLink>
 
-        <Section>
-          <Image alt="Microprocesador" src={Microprocesadores} />
-          <Paragraph>Procesadores</Paragraph>
-        </Section>
+        <NavLink to={"/Procesadores"}>
+          <Section>
+            <Image alt="Microprocesador" src={Microprocesadores} />
+            <Paragraph>Procesadores</Paragraph>
+          </Section>
+        </NavLink>
 
         <NavLink to={"/Notebooks"}>
           <Section>
@@ -32,10 +34,12 @@ const Categories = () => {
           </Section>
         </NavLink>
 
-        <Section>
-          <Image alt="Microprocesador" src={Perifericos} />
-          <Paragraph>Perifericos</Paragraph>
-        </Section>
+        <NavLink to={'/Perifericos'}>
+          <Section>
+            <Image alt="Microprocesador" src={Perifericos} />
+            <Paragraph>Perifericos</Paragraph>
+          </Section>
+        </NavLink>
 
         <NavLink to={"/Monitores"}>
           <Section>
