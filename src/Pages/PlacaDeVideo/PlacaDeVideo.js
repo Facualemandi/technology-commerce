@@ -46,20 +46,10 @@ const Caracteristica = styled.p`
 `;
 
 const PlacaDeVideo = () => {
-  const { producto, amount, addAmount, deleteAmount } = useAuth();
+  const { producto, amount, addAmount, deleteAmount, addProductCart } =
+    useAuth();
 
-  const {
-    almacenamiento,
-    description,
-    name,
-    pantalla,
-    price,
-    procesador,
-    ram,
-    sistema,
-    imgdesk,
-    especificaciones,
-  } = producto;
+  const { description, name, price, imgdesk, especificaciones, id } = producto;
 
   const items = Object.values(especificaciones);
 
@@ -90,7 +80,7 @@ const PlacaDeVideo = () => {
           </Ul>
         </UlPlaca>
         <SectionButtom>
-          <Buttom>Comprar</Buttom>
+          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
           <SectionAmount>
             <Minus onClick={deleteAmount}>Minus</Minus>
             <Amount>{amount}</Amount>

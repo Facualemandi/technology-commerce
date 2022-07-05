@@ -5,6 +5,7 @@ import PlacasDeVideo from "../Images/ImagesCategorie/PlacasDeVideo.png";
 import Notebooks from "../Images/ImagesCategorie/Notebooks.png";
 import Perifericos from "../Images/ImagesCategorie/Perifericos.png";
 import { StyleCategories } from "../Styles/StyleCategories";
+import { NavLink } from "react-router-dom";
 
 const { Main, Image, Section, Paragraph } = StyleCategories();
 
@@ -22,10 +23,12 @@ const Categories = () => {
           <Paragraph>Procesadores</Paragraph>
         </Section>
 
-        <Section>
-          <Image alt="Microprocesador" src={Notebooks} />
-          <Paragraph>Notebooks</Paragraph>
-        </Section>
+        <NavLink to={'/Notebooks'}>
+          <Section>
+            <Image alt="Microprocesador" src={Notebooks} />
+            <Paragraph>Notebooks</Paragraph>
+          </Section>
+        </NavLink>
 
         <Section>
           <Image alt="Microprocesador" src={Perifericos} />

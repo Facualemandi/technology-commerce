@@ -60,6 +60,24 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const addProductCart = (product, id) => {
+    if (amount > 0) {
+        if(productCart.find((obj) => obj.id === id)){
+           console.log('true')
+        }else{
+           setProductCart([
+            ...productCart,
+            product
+           ])
+           
+        }
+    }
+  };
+
+  useEffect(() => {
+    console.log(productCart) 
+  }, [productCart])
+
   return (
     <authContext.Provider
       value={{
@@ -73,6 +91,7 @@ export function AuthProvider({ children }) {
         amount,
         addAmount,
         deleteAmount,
+        addProductCart,
       }}
     >
       {children}

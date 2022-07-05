@@ -37,7 +37,7 @@ const {
 } = StyleProduct();
 
 const Notebook = () => {
-  const { producto, amount, addAmount, deleteAmount } = useAuth();
+  const { producto, amount, addAmount, deleteAmount, addProductCart } = useAuth();
 
   const {
     almacenamiento,
@@ -49,6 +49,7 @@ const Notebook = () => {
     ram,
     sistema,
     imgdesk,
+    id,
   } = producto;
 
   const storage = Object.values(almacenamiento);
@@ -57,8 +58,10 @@ const Notebook = () => {
   const memoryRam = Object.values(ram);
   const sistem = Object.values(sistema);
 
-  
+  console.log(id)
 
+  
+  console.log(producto)
 
   return (
     <>
@@ -91,7 +94,7 @@ const Notebook = () => {
 
             <Ul>
               {storage.map((item) => (
-                <Li>
+                <Li key={item.id}>
                   <p>{item}</p>
                 </Li>
               ))}
@@ -170,7 +173,7 @@ const Notebook = () => {
         </SectionDescription>
 
         <SectionButtom>
-          <Buttom>Comprar</Buttom>
+          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
           <SectionAmount>
             <Minus onClick={deleteAmount}>Minus</Minus>
             <Amount>{amount}</Amount>
