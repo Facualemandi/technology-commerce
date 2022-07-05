@@ -6,47 +6,52 @@ import Notebooks from "../Images/ImagesCategorie/Notebooks.png";
 import Perifericos from "../Images/ImagesCategorie/Perifericos.png";
 import { StyleCategories } from "../Styles/StyleCategories";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 const { Main, Image, Section, Paragraph } = StyleCategories();
 
+const Nav = styled(NavLink)`
+  text-decoration: none;
+  color: black;
+`;
 const Categories = () => {
   return (
     <>
       <Main>
-        <NavLink to={"/PlacasDeVideo"}>
+        <Nav to={"/PlacasDeVideo"}>
           <Section>
             <Image alt="Microprocesador" src={PlacasDeVideo} />
             <Paragraph>Placas de Video</Paragraph>
           </Section>
-        </NavLink>
+        </Nav>
 
-        <NavLink to={"/Procesadores"}>
+        <Nav to={"/Procesadores"}>
           <Section>
             <Image alt="Microprocesador" src={Microprocesadores} />
             <Paragraph>Procesadores</Paragraph>
           </Section>
-        </NavLink>
+        </Nav>
 
-        <NavLink to={"/Notebooks"}>
+        <Nav to={"/Notebooks"}>
           <Section>
             <Image alt="Microprocesador" src={Notebooks} />
             <Paragraph>Notebooks</Paragraph>
           </Section>
-        </NavLink>
+        </Nav>
 
-        <NavLink to={'/Perifericos'}>
+        <Nav to={"/Perifericos"}>
           <Section>
             <Image alt="Microprocesador" src={Perifericos} />
             <Paragraph>Perifericos</Paragraph>
           </Section>
-        </NavLink>
+        </Nav>
 
-        <NavLink to={"/Monitores"}>
+        <Nav to={"/Monitores"}>
           <Section>
             <Image alt="Microprocesador" src={Monitores} />
             <Paragraph>Monitores</Paragraph>
           </Section>
-        </NavLink>
+        </Nav>
       </Main>
     </>
   );

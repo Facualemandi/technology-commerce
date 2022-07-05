@@ -46,7 +46,7 @@ const Perifericos = () => {
         {perifericos.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Perifericos/${product.name}`} key={product.id}>
+              <TheNavLink to={`/DescriptionPerifericos/${product.name}`} key={product.id}>
                 <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
                     <Img alt={product.name} src={product.img} />

@@ -52,7 +52,7 @@ const PlacaDeVideo = () => {
   const { description, name, price, imgdesk, especificaciones, id } = producto;
 
   const items = Object.values(especificaciones);
-  console.log(producto)
+
 
   return (
     <>

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
-import { StyleProduct } from "../Styles/StyleProduct";
 import Nav from "./Nav";
+import {StyleProduct} from '../Styles/StyleProduct'
 
 const {
   Img,
@@ -45,14 +45,15 @@ const Caracteristica = styled.p`
   margin: 15px;
 `;
 
-const DescriptionProcesdor = () => {
+
+
+const DescriptionPerifericos = () => {
   const { producto, amount, addAmount, deleteAmount, addProductCart } =
     useAuth();
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
 
   const items = Object.values(especificaciones);
-
 
   return (
     <>
@@ -89,9 +90,8 @@ const DescriptionProcesdor = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
-      */
     </>
   );
 };
 
-export default DescriptionProcesdor;
+export default DescriptionPerifericos;

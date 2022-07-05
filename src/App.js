@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Cart from "./Components/Cart";
+import DescriptionPerifericos from "./Components/DescriptionPerifericos";
 import DescriptionProcesdor from "./Components/DescriptionProcesdor";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AuthProvider } from "./Context/authContext";
@@ -34,6 +35,7 @@ function App() {
             <Route path="/Procesadores" element={<Microprocesadores />} />
             <Route path="/Procesador/:name" element={<DescriptionProcesdor/>}/>
             <Route path="/Perifericos" element={<Perifericos />} />
+            <Route path="/DescriptionPerifericos/:name" element={<DescriptionPerifericos/>} />
           </Routes>
         </ScrollToTop>
       </AuthProvider>
