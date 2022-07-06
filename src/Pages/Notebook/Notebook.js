@@ -10,6 +10,7 @@ import Nav from "../../Components/Nav";
 import { StyleProduct } from "../../Styles/StyleProduct";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Footer from "../../Components/Footer";
+import ButtomReturn from "../../Components/ButtomReturn";
 
 const {
   Main,
@@ -193,6 +194,7 @@ const Notebook = () => {
           </SectionAmount>
         </SectionButtom>
         <Footer/>
+        <ButtomReturn/>
       </Main>
     </>
   );
