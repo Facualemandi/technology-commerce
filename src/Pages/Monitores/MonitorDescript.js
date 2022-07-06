@@ -6,6 +6,7 @@ import Nav from "../../Components/Nav";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Footer from "../../Components/Footer";
 import ButtomReturn from "../../Components/ButtomReturn";
+import { NavLink } from "react-router-dom";
 
 const {
   Img,
@@ -106,7 +107,10 @@ const MonitorDescript = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
-      <ButtomReturn />
+      <NavLink to={"/Monitores"}>
+        <ButtomReturn />
+      </NavLink>
+
       <Footer />
     </>
   );

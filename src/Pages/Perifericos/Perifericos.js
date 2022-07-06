@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import ButtomReturn from "../../Components/ButtomReturn";
 import Footer from "../../Components/Footer";
@@ -62,7 +63,10 @@ const Perifericos = () => {
           </>
         ))}
       </SectionContianer>
-      <ButtomReturn />
+      <NavLink to={"/Home"}>
+        <ButtomReturn />
+      </NavLink>
+
       <Footer />
     </>
   );

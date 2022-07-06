@@ -5,6 +5,7 @@ import { StyleProduct } from "../Styles/StyleProduct";
 import ModalAddCart from "./ModalAddCart";
 import Footer from "./Footer";
 import ButtomReturn from "./ButtomReturn";
+import { NavLink } from "react-router-dom";
 
 const {
   Main,
@@ -59,7 +60,9 @@ const DescriptionPerifericos = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>
+              Comprar
+            </ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>
@@ -85,7 +88,11 @@ const DescriptionPerifericos = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
-      <ButtomReturn/>
+      
+      <NavLink to={"/Perifericos"}>
+        <ButtomReturn />
+      </NavLink>
+
       <Footer />
     </>
   );

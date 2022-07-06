@@ -1,6 +1,5 @@
 import React from "react";
 import { FcLeft } from "react-icons/fc";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Return = styled(FcLeft)`
@@ -24,9 +23,7 @@ const Return = styled(FcLeft)`
 const ButtomReturn = () => {
   return (
     <>
-      <NavLink to={"/Home"}>
-        <Return>Volver</Return>
-      </NavLink>
+      <Return>Volver</Return>
     </>
   );
 };

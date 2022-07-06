@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import ButtomReturn from "../../Components/ButtomReturn";
 import Footer from "../../Components/Footer";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Nav from "../../Components/Nav";
@@ -78,7 +80,9 @@ const PlacaDeVideo = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>
+              Comprar
+            </ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>
@@ -105,7 +109,11 @@ const PlacaDeVideo = () => {
         </SectionButtom>
       </Main>
 
-      <Footer/>
+      <NavLink to={"/PlacasDeVideo"}>
+        <ButtomReturn />
+      </NavLink>
+
+      <Footer />
     </>
   );
 };

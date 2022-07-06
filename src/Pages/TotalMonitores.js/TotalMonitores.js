@@ -7,6 +7,7 @@ import Loader from "../../Loader/Loader";
 import { StyleHomeProducts } from "../../Styles/StyleHomeProducts";
 import Footer from "../../Components/Footer";
 import ButtomReturn from "../../Components/ButtomReturn";
+import { NavLink } from "react-router-dom";
 
 const {
   Section,
@@ -62,7 +63,10 @@ function TotalMonitores() {
           </>
         ))}
       </SectionContianer>
-      <ButtomReturn />
+      <NavLink to={"/Home"}>
+        <ButtomReturn />
+      </NavLink>
+
       <Footer />
     </>
   );

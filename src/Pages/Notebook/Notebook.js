@@ -11,6 +11,7 @@ import { StyleProduct } from "../../Styles/StyleProduct";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Footer from "../../Components/Footer";
 import ButtomReturn from "../../Components/ButtomReturn";
+import { NavLink } from "react-router-dom";
 
 const {
   Main,
@@ -75,7 +76,6 @@ const Notebook = () => {
 
       {modalAdd && <ModalAddCart />}
       <Main>
-
         <SectionDesktopNotebook>
           <SectionImg>
             <Img alt="Notebook" src={imgdesk} />
@@ -86,7 +86,9 @@ const Notebook = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>
+              Comprar
+            </ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>
@@ -190,8 +192,10 @@ const Notebook = () => {
             <Add onClick={addAmount}>More</Add>
           </SectionAmount>
         </SectionButtom>
-        <Footer/>
-        <ButtomReturn/>
+        <Footer />
+        <NavLink to={"/Notebooks"}>
+          <ButtomReturn />
+        </NavLink>
       </Main>
     </>
   );
