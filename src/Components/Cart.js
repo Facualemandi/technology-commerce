@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import { BsCartX } from "react-icons/bs";
 import Footer from "./Footer";
 import ButtomReturn from "./ButtomReturn";
+import { NavLink } from "react-router-dom";
 
 const {
   Main,
@@ -116,7 +117,10 @@ const Cart = () => {
           ))}
         </SectionContianer>
       </Container>
-      <ButtomReturn />
+      <NavLink to={"/Home"}>
+        <ButtomReturn />
+      </NavLink>
+
       <Footer />
     </>
   );
