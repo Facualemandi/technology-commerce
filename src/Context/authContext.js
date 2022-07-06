@@ -44,6 +44,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      console.log(user)
     });
   }, [user]);
 
@@ -79,7 +80,7 @@ export function AuthProvider({ children }) {
   const openModal = () => {};
 
   useEffect(() => {
-    // console.log(productCart);
+    console.log(productCart);
   }, [productCart]);
 
   return (

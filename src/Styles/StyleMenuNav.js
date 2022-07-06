@@ -23,8 +23,6 @@ export const StyleMenuNav = () => {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 
-
-
     @media (min-width: 780px) {
       display: flex;
       width: 100vw;
@@ -54,15 +52,16 @@ export const StyleMenuNav = () => {
   `;
 
   const Buttom = styled.button`
-    font-family: "Roboto", sans-serif;
+    font-weight: bold;
     padding: 5px;
     border-radius: 5px;
     border: none;
     background-color: #78787e;
     color: white;
     display: flex;
-    margin: auto;
+    margin: 10px;
     margin-top: 30px;
+
 
     @media (min-width: 780px) {
       display: none;

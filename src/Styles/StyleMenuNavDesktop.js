@@ -3,12 +3,6 @@ import { BsCart3 } from "react-icons/bs";
 import styled from "styled-components";
 
 const Section = styled.section`
-  width: 50%;
-  height: 93.6vh;
-  position: absolute;
-  z-index: 100;
-  top: 60px;
-  background-color: #37373f;
   display: none;
 
   @media (min-width: 780px) {
@@ -16,8 +10,8 @@ const Section = styled.section`
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    top: 0px;
-    height: 60px;
+    margin-top: 60px;
+    height: 50px;
     width: 100vw;
     background-color: #37373f;
   }
@@ -34,8 +28,8 @@ const Ul = styled.ul`
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60px;
-    width: 80%;
+    height: 50px;
+    width: 90%;
   }
 `;
 
@@ -43,8 +37,6 @@ const Li = styled.li`
   padding: 5px;
   border-radius: 5px;
   color: white;
-  margin: 10px;
-  margin-top: 10px;
 
   @media (min-width: 780px) {
     &&:hover {
@@ -71,15 +63,17 @@ const Buttom = styled.button`
   padding: 5px;
   border-radius: 5px;
   border: none;
-  background-color: #37373f;
-  color: white;
   cursor: pointer;
   transition: 0.5s;
+  margin-left: 25px;
+  padding-top: 5px;
+  background-color: rgb(40, 40, 46);
+  color: white;
+  font-size: 16px;
 
   &&:hover {
     background-color: #545459;
     transition: 0.5s;
-    color: white;
   }
 `;
 
