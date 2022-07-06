@@ -3,6 +3,7 @@ import { useAuth } from "../Context/authContext";
 import Nav from "./Nav";
 import { StyleProduct } from "../Styles/StyleProduct";
 import ModalAddCart from "./ModalAddCart";
+import Footer from "./Footer";
 
 const {
   Main,
@@ -83,6 +84,7 @@ const DescriptionPerifericos = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
+      <Footer />
     </>
   );
 };

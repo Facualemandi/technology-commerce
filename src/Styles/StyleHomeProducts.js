@@ -49,7 +49,6 @@ export const StyleHomeProducts = () => {
 
     @media (min-width: 960px) {
       max-width: 1080px;
-      height: 330px;
       grid-template-columns: repeat(4, 1fr);
     }
   `;
@@ -88,16 +87,16 @@ export const StyleHomeProducts = () => {
     color: black;
   `;
 
-const SectionImg = styled.section`
-display: flex;
-justify-content: center;
-align-items: center;
-background: #bdc3c7;
-background: -webkit-linear-gradient(to top, #d6d6d6, #ffffff);
-background: linear-gradient(to top, #d6d6d6, #ffffff);
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-`;
+  const SectionImg = styled.section`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to top, #d6d6d6, #ffffff);
+    background: linear-gradient(to top, #d6d6d6, #ffffff);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  `;
 
   return {
     Main,

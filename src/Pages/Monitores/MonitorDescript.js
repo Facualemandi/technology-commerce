@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useAuth } from "../../Context/authContext";
 import Nav from "../../Components/Nav";
 import ModalAddCart from "../../Components/ModalAddCart";
+import Footer from "../../Components/Footer";
 
 const {
   Img,
@@ -48,8 +49,14 @@ const Caracteristica = styled.p`
 `;
 
 const MonitorDescript = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart ,modalAdd} =
-    useAuth();
+  const {
+    producto,
+    amount,
+    addAmount,
+    deleteAmount,
+    addProductCart,
+    modalAdd,
+  } = useAuth();
 
   const { description, name, id, price, imgdesk, especificaciones } = producto;
   const items = Object.values(especificaciones);
@@ -96,6 +103,7 @@ const MonitorDescript = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
+      <Footer />
     </>
   );
 };

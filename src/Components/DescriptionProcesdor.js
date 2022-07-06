@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
 import { StyleProduct } from "../Styles/StyleProduct";
+import Footer from "./Footer";
 import ModalAddCart from "./ModalAddCart";
 import Nav from "./Nav";
 
@@ -97,7 +98,7 @@ const DescriptionProcesdor = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
-      */
+      <Footer/>
     </>
   );
 };

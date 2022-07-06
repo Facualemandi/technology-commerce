@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Footer from "../../Components/Footer";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
@@ -103,6 +104,8 @@ const PlacaDeVideo = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
+
+      <Footer/>
     </>
   );
 };

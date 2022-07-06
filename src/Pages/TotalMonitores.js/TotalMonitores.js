@@ -7,6 +7,7 @@ import Loader from "../../Loader/Loader";
 import { StyleHomeProducts } from "../../Styles/StyleHomeProducts";
 import { FcLeft } from "react-icons/fc";
 import ButtomReturn from "../../Components/ButtomReturn";
+import Footer from "../../Components/Footer";
 
 const {
   Section,
@@ -73,7 +74,7 @@ function TotalMonitores() {
           </>
         ))}
       </SectionContianer>
-      <ButtomReturn />
+      <Footer/>
     </>
   );
 }
