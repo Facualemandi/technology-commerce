@@ -3,6 +3,7 @@ import { StyleProduct } from "../../Styles/StyleProduct";
 import styled from "styled-components";
 import { useAuth } from "../../Context/authContext";
 import Nav from "../../Components/Nav";
+import ModalAddCart from "../../Components/ModalAddCart";
 
 const {
   Img,
@@ -47,17 +48,16 @@ const Caracteristica = styled.p`
 `;
 
 const MonitorDescript = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart } =
+  const { producto, amount, addAmount, deleteAmount, addProductCart ,modalAdd} =
     useAuth();
 
   const { description, name, id, price, imgdesk, especificaciones } = producto;
   const items = Object.values(especificaciones);
 
- 
-
   return (
     <>
       <Nav />
+      {modalAdd && <ModalAddCart />}
 
       <Main>
         <SectionDesktopNotebook>

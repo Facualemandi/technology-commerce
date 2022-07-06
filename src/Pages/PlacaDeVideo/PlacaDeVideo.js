@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import ModalAddCart from "../../Components/ModalAddCart";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
 import { StyleProduct } from "../../Styles/StyleProduct";
@@ -47,8 +48,14 @@ const Caracteristica = styled.p`
 `;
 
 const PlacaDeVideo = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart } =
-    useAuth();
+  const {
+    producto,
+    amount,
+    addAmount,
+    deleteAmount,
+    addProductCart,
+    modalAdd,
+  } = useAuth();
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
 
@@ -57,6 +64,8 @@ const PlacaDeVideo = () => {
   return (
     <>
       <Nav />
+      {modalAdd && <ModalAddCart />}
+
       <Main>
         <SectionDesktopNotebook>
           <SectionImg>

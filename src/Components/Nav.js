@@ -3,11 +3,29 @@ import MenuNav from "./MenuNav";
 import MenuNavDesktop from "./MenuNavDesktop";
 import { StyleNav } from "../Styles/StyleNav";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { useAuth } from "../Context/authContext";
 
 const { NavBar, IconBurger, IconCart } = StyleNav();
 
+const NavSection = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+`;
+
+const AmountProducts = styled.p`
+  color: white;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+ font-weight: lighter;
+`;
+
 const Nav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const { productCart } = useAuth();
 
   const openNav = () => {
     console.log("Nav abierto");
@@ -18,19 +36,16 @@ const Nav = () => {
     }
   };
 
-  const openCart = () => {
-    
-  };
-
   return (
     <>
       <NavBar>
         <IconBurger onClick={openNav} />
         {openMenu && <MenuNav openMenu={openMenu} />}
         <MenuNavDesktop />
-        <NavLink to='/Cart'>
-          <IconCart onClick={openCart} />
-        </NavLink>
+        <NavSection to="/Cart">
+          <AmountProducts>{productCart.length}</AmountProducts>
+          <IconCart />
+        </NavSection>
       </NavBar>
     </>
   );

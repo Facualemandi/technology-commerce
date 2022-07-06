@@ -25,7 +25,8 @@ const Section = styled.section`
 
 const Ul = styled.ul`
   list-style: none;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 
   @media (min-width: 760px) {
     display: flex;
@@ -34,6 +35,7 @@ const Ul = styled.ul`
     align-items: center;
     text-align: center;
     height: 60px;
+    width: 80%;
   }
 `;
 
@@ -65,11 +67,11 @@ const IconCart = styled(BsCart3)`
 `;
 
 const Buttom = styled.button`
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 5px;
   border-radius: 5px;
   border: none;
-  background-color: #4c4c57;
+  background-color: #37373f;
   color: white;
   cursor: pointer;
   transition: 0.5s;

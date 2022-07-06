@@ -8,6 +8,7 @@ import theProcesador from "../../Images/IconsSvg/procesador.png";
 import theSistem from "../../Images/IconsSvg/window.png";
 import Nav from "../../Components/Nav";
 import { StyleProduct } from "../../Styles/StyleProduct";
+import ModalAddCart from "../../Components/ModalAddCart";
 
 const {
   Main,
@@ -38,7 +39,14 @@ const {
 } = StyleProduct();
 
 const Notebook = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart } = useAuth();
+  const {
+    producto,
+    amount,
+    addAmount,
+    deleteAmount,
+    addProductCart,
+    modalAdd,
+  } = useAuth();
 
   const {
     almacenamiento,
@@ -59,14 +67,11 @@ const Notebook = () => {
   const memoryRam = Object.values(ram);
   const sistem = Object.values(sistema);
 
-  console.log(id)
-
-  
-  console.log(producto)
-
   return (
     <>
       <Nav />
+
+      {modalAdd && <ModalAddCart />}
       <Main>
         <Return to={"/Home"}>
           <ParragraphRerutn>Volver</ParragraphRerutn>

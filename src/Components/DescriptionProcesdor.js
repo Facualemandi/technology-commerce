@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
 import { StyleProduct } from "../Styles/StyleProduct";
+import ModalAddCart from "./ModalAddCart";
 import Nav from "./Nav";
 
 const {
@@ -47,7 +48,7 @@ const Caracteristica = styled.p`
 `;
 
 const DescriptionProcesdor = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart } =
+  const { producto, amount, addAmount, deleteAmount, addProductCart, modalAdd } =
     useAuth();
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
@@ -57,6 +58,8 @@ const DescriptionProcesdor = () => {
   return (
     <>
       <Nav />
+      {modalAdd && <ModalAddCart />}
+      
       <Main>
         <SectionDesktopNotebook>
           <SectionImg>

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 export const StyleMenuNav = () => {
-    
   const Section = styled.section`
     width: 50%;
     height: 93.6vh;
@@ -21,7 +20,10 @@ export const StyleMenuNav = () => {
 
   const Ul = styled.ul`
     list-style: none;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+
+
 
     @media (min-width: 760px) {
       display: flex;

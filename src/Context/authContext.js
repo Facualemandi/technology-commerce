@@ -63,21 +63,20 @@ export function AuthProvider({ children }) {
   const addProductCart = (product, id) => {
     if (amount > 0) {
       if (productCart.find((obj) => obj.id === id)) {
-        console.log("true");
+         console.log('Producto ya agrregadao')
+         setAmount(0)
       } else {
         setProductCart([...productCart, product]);
+        setModalAdd(true);
         setAmount(0);
+        setTimeout(() => {
+          setModalAdd(false);
+        }, 1500);
       }
     }
   };
 
-  const openModal = () => {
-    setModalAdd(true);
-
-    setTimeout(() => {
-      setModalAdd(false);
-    }, 2000);
-  };
+  const openModal = () => {};
 
   useEffect(() => {
     console.log(productCart);
@@ -100,6 +99,7 @@ export function AuthProvider({ children }) {
         productCart,
         setProductCart,
         openModal,
+        modalAdd,
       }}
     >
       {children}
