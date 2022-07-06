@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ButtomReturn from "../../Components/ButtomReturn";
+import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
 import { useAuth } from "../../Context/authContext";
 import { useProducts } from "../../Hooks/useProducts";
@@ -37,14 +37,13 @@ const Microprocesadores = () => {
   return (
     <>
       <Nav />
-
-      <Parraagraph>Micro-Procesadores</Parraagraph>
+      <Parraagraph>Microprocesadores</Parraagraph>
       <SectionContianer>
         {loaging && <Loader />}
         {procesadores.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Procesador/${product.id}`} key={product.id}>
+              <TheNavLink to={`/Notebook/${product.name}`} key={product.id}>
                 <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
                     <Img alt={product.name} src={product.img} />
@@ -56,8 +55,8 @@ const Microprocesadores = () => {
             )}
           </>
         ))}
-        <ButtomReturn />
       </SectionContianer>
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import { useAuth } from "../Context/authContext";
 import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 import Nav from "./Nav";
 import { BsCartX } from "react-icons/bs";
+import Footer from "./Footer";
 
 const {
   Main,
@@ -19,6 +20,7 @@ const {
 
 const Container = styled.section`
   margin-top: 70px;
+  height: 70vh;
 `;
 
 const CarritoVacio = styled.p`
@@ -96,7 +98,7 @@ const Cart = () => {
         <SectionContianer>
           {productCart.map((note) => (
             <>
-              <TheNavLink to={`/Notebook/${note.name}`}>
+              <TheNavLink to={`/Home`}>
                 <Section onClick={() => handleProduct(note)}>
                   <SectionImg>
                     <Img alt={note.name} src={note.img} />
@@ -112,6 +114,7 @@ const Cart = () => {
           ))}
         </SectionContianer>
       </Container>
+      <Footer />
     </>
   );
 };

@@ -10,14 +10,14 @@ import Footer from "../../Components/Footer";
 const Home = () => {
   return (
     <>
-      {/* <ProtectRoute> */}
-      <Nav />
-      <SliderShow />
-      <Marks />
-      <Categories />
-      <ProductsHome />
-      <Footer />
-      {/* </ProtectRoute> */}
+      <ProtectRoute>
+        <Nav />
+        <SliderShow />
+        <Marks />
+        <Categories />
+        <ProductsHome />
+        <Footer />
+      </ProtectRoute>
     </>
   );
 };

@@ -5,8 +5,6 @@ import { useAuth } from "../../Context/authContext";
 import { useProducts } from "../../Hooks/useProducts";
 import Loader from "../../Loader/Loader";
 import { StyleHomeProducts } from "../../Styles/StyleHomeProducts";
-import { FcLeft } from "react-icons/fc";
-import ButtomReturn from "../../Components/ButtomReturn";
 import Footer from "../../Components/Footer";
 
 const {
@@ -30,17 +28,6 @@ const Parraagraph = styled.p`
   color: #303030;
   font-weight: bold;
   margin-top: 70px;
-`;
-const Return = styled(FcLeft)`
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(193, 193, 193, 0.667);
-  border: 3px solid #7b9cee;
-  background-color: #e1e6ff;
 `;
 
 function TotalMonitores() {
@@ -74,7 +61,7 @@ function TotalMonitores() {
           </>
         ))}
       </SectionContianer>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -12,6 +12,7 @@ const FooterContainer = styled.footer`
   width: 100vw;
   height: auto;
   background-color: #37373f;
+  padding: 10px;
 
   @media (min-width: 780px) {
     display: flex;
@@ -115,6 +116,10 @@ const SectionDesktop = styled.section`
   }
 `;
 
+const NavToRedes = styled.a`
+  color: white;
+`;
+
 const Footer = () => {
   const { loaging } = useProducts();
   return (
@@ -149,19 +154,49 @@ const Footer = () => {
 
               <SectionThree>
                 <Redes>
-                  <FaFacebookSquare />
+                  <NavToRedes
+                    href="https://www.instagram.com/facu_alemandi/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <FaInstagramSquare />
+                  </NavToRedes>
                 </Redes>
                 <Redes>
-                  <FaTwitterSquare />
+                  <NavToRedes
+                    href="https://twitter.com/AlemandiFacundo"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <FaTwitterSquare />
+                  </NavToRedes>
                 </Redes>
                 <Redes>
-                  <FaInstagramSquare />
+                  <NavToRedes
+                    href="https://www.linkedin.com/in/facundo-alemandi-4714a7233/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <FaLinkedin />
+                  </NavToRedes>
                 </Redes>
                 <Redes>
-                  <FaLinkedin />
+                  <NavToRedes
+                    href="https://github.com/Facualemandi"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <FaGithubSquare />
+                  </NavToRedes>
                 </Redes>
                 <Redes>
-                  <FaGithubSquare />
+                  <NavToRedes
+                    href="https://www.facebook.com/facundo.alemandi"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <FaFacebookSquare />
+                  </NavToRedes>
                 </Redes>
               </SectionThree>
             </SectionDesktop>

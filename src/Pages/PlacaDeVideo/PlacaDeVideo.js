@@ -78,7 +78,7 @@ const PlacaDeVideo = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>

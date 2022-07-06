@@ -49,7 +49,7 @@ const Caracteristica = styled.p`
 `;
 
 const DescriptionProcesdor = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart, modalAdd } =
+  const { producto, amount, addAmount, deleteAmount, addProductCart, modalAdd, } =
     useAuth();
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
@@ -72,7 +72,7 @@ const DescriptionProcesdor = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>

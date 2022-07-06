@@ -22,6 +22,19 @@ const SectionParragraph = styled.section`
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 0px 10px 0px rgba(188, 188, 188, 0.69);
+
+  @media (min-width: 780px){
+    width: 80vw;
+  }
+  @media (min-width: 1080px){
+    width: 70vw;
+  }
+  @media (min-width: 1380px){
+    width: 60vw;
+  }
+  @media (min-width: 1680px){
+    width: 30vw;
+  }
 `;
 
 const IconAddCart = styled(FcApproval)`

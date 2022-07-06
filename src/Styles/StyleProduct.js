@@ -320,6 +320,7 @@ export const StyleProduct = () => {
       display: flex;
       margin: auto;
       width: 65vw;
+      display: none;
     }
   `;
 
@@ -330,12 +331,13 @@ export const StyleProduct = () => {
     right: 10px;
     top: 75px;
     border-radius: 5px;
-    background-color: #d3edff;
-    border: 3px solid #bde1fa;
+    background-color: #eaeaea;
+    border: 3px solid #d6d6d6;
     font-family: sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: black;
+    box-shadow: 0px 0px 5px 0px rgba(207, 207, 207, 0.527);
 
     @media (min-width: 760px) {
       border: 3px solid #9ed6ff;
@@ -380,6 +382,6 @@ export const StyleProduct = () => {
     UlPlaca,
     Caracteristica,
     SectionAmountDesktop,
-    ButtomDesktop
+    ButtomDesktop,
   };
 };

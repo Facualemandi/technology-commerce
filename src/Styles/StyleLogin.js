@@ -28,7 +28,7 @@ export const StyleLogin = () => {
       width: 30vw;
       display: flex;
       justify-content: center;
-      height: 270px;
+      height: auto;
     }
   `;
 
