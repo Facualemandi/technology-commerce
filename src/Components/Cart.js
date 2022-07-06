@@ -5,6 +5,7 @@ import { StyleHomeProducts } from "../Styles/StyleHomeProducts";
 import Nav from "./Nav";
 import { BsCartX } from "react-icons/bs";
 import Footer from "./Footer";
+import ButtomReturn from "./ButtomReturn";
 
 const {
   Main,
@@ -83,6 +84,7 @@ const Cart = () => {
   return (
     <>
       <Nav />
+      
       <Container>
         <Parragraph>Productos Agregados al carrito</Parragraph>
         {productCart.length === 0 && (

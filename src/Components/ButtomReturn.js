@@ -15,6 +15,10 @@ const Return = styled(FcLeft)`
   background-color: #f8f8f8;
   display: flex;
   margin: auto;
+
+  @media (min-width: 780px) {
+    display: none;
+  }
 `;
 
 const ButtomReturn = () => {

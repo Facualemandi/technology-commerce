@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import { StyleProduct } from "../Styles/StyleProduct";
 import ModalAddCart from "./ModalAddCart";
 import Footer from "./Footer";
+import ButtomReturn from "./ButtomReturn";
 
 const {
   Main,
@@ -84,6 +85,7 @@ const DescriptionPerifericos = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
+      <ButtomReturn/>
       <Footer />
     </>
   );

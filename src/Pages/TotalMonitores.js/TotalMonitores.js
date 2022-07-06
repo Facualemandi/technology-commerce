@@ -6,6 +6,7 @@ import { useProducts } from "../../Hooks/useProducts";
 import Loader from "../../Loader/Loader";
 import { StyleHomeProducts } from "../../Styles/StyleHomeProducts";
 import Footer from "../../Components/Footer";
+import ButtomReturn from "../../Components/ButtomReturn";
 
 const {
   Section,
@@ -61,6 +62,7 @@ function TotalMonitores() {
           </>
         ))}
       </SectionContianer>
+      <ButtomReturn />
       <Footer />
     </>
   );
