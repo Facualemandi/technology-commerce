@@ -84,7 +84,7 @@ const Cart = () => {
   return (
     <>
       <Nav />
-      
+
       <Container>
         <Parragraph>Productos Agregados al carrito</Parragraph>
         {productCart.length === 0 && (
@@ -116,6 +116,7 @@ const Cart = () => {
           ))}
         </SectionContianer>
       </Container>
+      <ButtomReturn />
       <Footer />
     </>
   );
