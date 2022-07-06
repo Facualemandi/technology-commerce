@@ -30,7 +30,7 @@ const Parraagraph = styled.p`
   font-size: 20px;
   color: #303030;
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 100px;
 `;
 
 const Perifericos = () => {

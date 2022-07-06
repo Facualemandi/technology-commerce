@@ -23,6 +23,7 @@ export const StyleHomeProducts = () => {
       max-width: 1080px;
       display: flex;
       margin: 20px auto;
+  
     }
   `;
 
