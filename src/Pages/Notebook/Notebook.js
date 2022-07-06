@@ -75,9 +75,6 @@ const Notebook = () => {
 
       {modalAdd && <ModalAddCart />}
       <Main>
-        <Return to={"/Home"}>
-          <ParragraphRerutn>Volver</ParragraphRerutn>
-        </Return>
 
         <SectionDesktopNotebook>
           <SectionImg>
