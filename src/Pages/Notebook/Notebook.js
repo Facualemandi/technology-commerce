@@ -34,6 +34,7 @@ const {
   Amount,
   Add,
   Minus,
+  SectionAmountDesktop,
 } = StyleProduct();
 
 const Notebook = () => {
@@ -82,6 +83,11 @@ const Notebook = () => {
             <Description>{description}</Description>
 
             <ButtomDesktop>Comprar</ButtomDesktop>
+            <SectionAmountDesktop>
+              <Minus onClick={deleteAmount}>Minus</Minus>
+              <Amount>{amount}</Amount>
+              <Add onClick={addAmount}>More</Add>
+            </SectionAmountDesktop>
           </SectionName>
         </SectionDesktopNotebook>
 

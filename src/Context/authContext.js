@@ -22,6 +22,7 @@ export function AuthProvider({ children }) {
   const [producto, setProducto] = useState([]);
   const [productCart, setProductCart] = useState([]);
   const [amount, setAmount] = useState(0);
+  const [modalAdd, setModalAdd] = useState(false);
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -61,21 +62,26 @@ export function AuthProvider({ children }) {
 
   const addProductCart = (product, id) => {
     if (amount > 0) {
-        if(productCart.find((obj) => obj.id === id)){
-           console.log('true')
-        }else{
-           setProductCart([
-            ...productCart,
-            product
-           ])
-           
-        }
+      if (productCart.find((obj) => obj.id === id)) {
+        console.log("true");
+      } else {
+        setProductCart([...productCart, product]);
+        setAmount(0);
+      }
     }
   };
 
+  const openModal = () => {
+    setModalAdd(true);
+
+    setTimeout(() => {
+      setModalAdd(false);
+    }, 2000);
+  };
+
   useEffect(() => {
-    console.log(productCart) 
-  }, [productCart])
+    console.log(productCart);
+  }, [productCart]);
 
   return (
     <authContext.Provider
@@ -91,6 +97,9 @@ export function AuthProvider({ children }) {
         addAmount,
         deleteAmount,
         addProductCart,
+        productCart,
+        setProductCart,
+        openModal,
       }}
     >
       {children}

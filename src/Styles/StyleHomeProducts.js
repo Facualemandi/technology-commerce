@@ -32,6 +32,7 @@ export const StyleHomeProducts = () => {
     height: auto;
     width: 95%;
     margin: 10px;
+    min-height: 250px;
   `;
 
   const SectionContianer = styled.section`

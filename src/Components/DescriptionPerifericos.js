@@ -1,51 +1,30 @@
 import React from "react";
-import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
 import Nav from "./Nav";
-import {StyleProduct} from '../Styles/StyleProduct'
+import { StyleProduct } from "../Styles/StyleProduct";
 
 const {
-  Img,
+  Main,
   SectionImg,
+  Img,
+  SectionName,
   Name,
   Price,
   Description,
-  SectionName,
-  ButtomDesktop,
   Ul,
   Li,
-  Main,
-  SectionDesktopNotebook,
   SectionButtom,
   Buttom,
+  SectionDesktopNotebook,
   SectionAmount,
-  Minus,
   Amount,
   Add,
+  Minus,
+  UlPlaca,
+  Caracteristica,
+  SectionAmountDesktop,
+  ButtomDesktop,
 } = StyleProduct();
-
-const UlPlaca = styled.section`
-  border-left: 5px solid #a090d4;
-  margin: 10px;
-  width: 95vw;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-
-  @media (min-width: 760px) {
-    border-top: 1px solid grey;
-    border-left: none;
-    width: 50vw;
-  }
-`;
-
-const Caracteristica = styled.p`
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  margin: 15px;
-`;
-
-
 
 const DescriptionPerifericos = () => {
   const { producto, amount, addAmount, deleteAmount, addProductCart } =
@@ -70,7 +49,13 @@ const DescriptionPerifericos = () => {
             <Description>{description}</Description>
 
             <ButtomDesktop>Comprar</ButtomDesktop>
+            <SectionAmountDesktop>
+              <Minus onClick={deleteAmount}>Minus</Minus>
+              <Amount>{amount}</Amount>
+              <Add onClick={addAmount}>More</Add>
+            </SectionAmountDesktop>
           </SectionName>
+          
         </SectionDesktopNotebook>
 
         <UlPlaca>

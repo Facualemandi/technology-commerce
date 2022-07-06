@@ -22,6 +22,7 @@ const {
   Minus,
   Amount,
   Add,
+  SectionAmountDesktop,
 } = StyleProduct();
 
 const UlPlaca = styled.section`
@@ -53,7 +54,6 @@ const PlacaDeVideo = () => {
 
   const items = Object.values(especificaciones);
 
-
   return (
     <>
       <Nav />
@@ -69,6 +69,11 @@ const PlacaDeVideo = () => {
             <Description>{description}</Description>
 
             <ButtomDesktop>Comprar</ButtomDesktop>
+            <SectionAmountDesktop>
+              <Minus onClick={deleteAmount}>Minus</Minus>
+              <Amount>{amount}</Amount>
+              <Add onClick={addAmount}>More</Add>
+            </SectionAmountDesktop>
           </SectionName>
         </SectionDesktopNotebook>
 

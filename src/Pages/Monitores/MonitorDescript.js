@@ -22,6 +22,7 @@ const {
   Minus,
   Amount,
   Add,
+  SectionAmountDesktop,
 } = StyleProduct();
 
 const UlPlaca = styled.section`
@@ -70,6 +71,11 @@ const MonitorDescript = () => {
             <Description>{description}</Description>
 
             <ButtomDesktop>Comprar</ButtomDesktop>
+            <SectionAmountDesktop>
+              <Minus onClick={deleteAmount}>Minus</Minus>
+              <Amount>{amount}</Amount>
+              <Add onClick={addAmount}>More</Add>
+            </SectionAmountDesktop>
           </SectionName>
         </SectionDesktopNotebook>
 

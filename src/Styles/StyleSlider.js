@@ -1,9 +1,10 @@
-import React from "react";
+
 import styled from "styled-components";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineLeft } from "react-icons/ai";
 
 export const StyleSlider = () => {
+
   const ContenedorDiv = styled.div`
     overflow: hidden;
     position: relative;
@@ -97,6 +98,7 @@ export const StyleSlider = () => {
       height: 300px;
     }
   `;
+  
   return {
     ContenedorDiv,
     ContenedorSliderShow,
