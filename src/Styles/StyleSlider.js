@@ -32,7 +32,7 @@ export const StyleSlider = () => {
       vertical-align: top;
     }
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       height: 250px;
     }
   `;
@@ -92,7 +92,7 @@ export const StyleSlider = () => {
     display: ${({ dblockDesk }) => dblockDesk};
     max-height: 400px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: ${({ dnoneDesk }) => dnoneDesk};
       display: ${({ dblock }) => dblock};
       height: 300px;

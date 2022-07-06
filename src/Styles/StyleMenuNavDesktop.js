@@ -11,7 +11,7 @@ const Section = styled.section`
   background-color: #37373f;
   display: none;
 
-  @media (min-width: 760px) {
+  @media (min-width: 780px) {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,7 +28,7 @@ const Ul = styled.ul`
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 
-  @media (min-width: 760px) {
+  @media (min-width: 780px) {
     display: flex;
     width: auto;
     justify-content: center;
@@ -46,7 +46,7 @@ const Li = styled.li`
   margin: 10px;
   margin-top: 10px;
 
-  @media (min-width: 760px) {
+  @media (min-width: 780px) {
     &&:hover {
       background-color: #4e4e53;
       transition: 0.5s;
@@ -58,7 +58,7 @@ const Li = styled.li`
 const IconCart = styled(BsCart3)`
   display: none;
 
-  @media (min-width: 760px) {
+  @media (min-width: 780px) {
     display: block;
     width: 30px;
     height: 30px;

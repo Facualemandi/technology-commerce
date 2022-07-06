@@ -9,6 +9,7 @@ import theSistem from "../../Images/IconsSvg/window.png";
 import Nav from "../../Components/Nav";
 import { StyleProduct } from "../../Styles/StyleProduct";
 import ModalAddCart from "../../Components/ModalAddCart";
+import Footer from "../../Components/Footer";
 
 const {
   Main,
@@ -191,6 +192,7 @@ const Notebook = () => {
             <Add onClick={addAmount}>More</Add>
           </SectionAmount>
         </SectionButtom>
+        <Footer/>
       </Main>
     </>
   );

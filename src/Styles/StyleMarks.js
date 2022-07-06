@@ -14,7 +14,7 @@ export const StyleMarks = () => {
     margin-top: 10px;
     width: 300px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       width: 1080px;
       display: flex;
       justify-content: flex-start;
@@ -29,7 +29,7 @@ export const StyleMarks = () => {
     width: auto;
     overflow: scroll;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       overflow: scroll;
       width: auto;
       display: flex;
@@ -57,7 +57,7 @@ export const StyleMarks = () => {
   const Main = styled.main`
     overflow: scroll;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       overflow: hidden;
       overflow-y: hidden;
       width: 95vw;

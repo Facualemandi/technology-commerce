@@ -13,7 +13,7 @@ export const StyleProduct = () => {
     flex-direction: column;
     margin: auto;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       border-top: 1px solid grey;
       border-left: none;
       width: 50vw;
@@ -131,7 +131,7 @@ export const StyleProduct = () => {
   const Name = styled.p`
     margin: 10px;
     font-family: "Montserrat", sans-serif;
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       font-size: 25px;
     }
   `;
@@ -139,7 +139,7 @@ export const StyleProduct = () => {
     margin: 10px;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       font-size: 30px;
     }
   `;
@@ -148,7 +148,7 @@ export const StyleProduct = () => {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       font-size: 18px;
       width: 350px;
     }
@@ -288,7 +288,7 @@ export const StyleProduct = () => {
     flex-direction: column;
     margin: auto;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       min-height: 151px;
     }
   `;
@@ -314,7 +314,7 @@ export const StyleProduct = () => {
   `;
 
   const Return = styled(NavLink)`
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       text-decoration: none;
       padding-top: 10px;
       display: flex;
@@ -339,7 +339,7 @@ export const StyleProduct = () => {
     color: black;
     box-shadow: 0px 0px 5px 0px rgba(207, 207, 207, 0.527);
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       border: 3px solid #9ed6ff;
       padding: 10px;
       font-family: sans-serif;

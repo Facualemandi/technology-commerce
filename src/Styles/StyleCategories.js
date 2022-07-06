@@ -8,7 +8,7 @@ export const StyleCategories = () => {
     align-items: center;
     margin-top: 30px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: none;
     }
   `;

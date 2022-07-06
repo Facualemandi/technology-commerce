@@ -23,7 +23,7 @@ export const StyleNav = () => {
     color: white;
     margin: 5px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: none;
     }
   `;
@@ -35,7 +35,7 @@ export const StyleNav = () => {
     margin: 5px;
     margin-right: 10px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: none;
     }
   `;

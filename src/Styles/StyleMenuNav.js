@@ -11,7 +11,7 @@ export const StyleMenuNav = () => {
     transition: 1s;
     background-color: #5e5e65;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       top: 0px;
       height: 60px;
       width: auto;
@@ -25,7 +25,7 @@ export const StyleMenuNav = () => {
 
 
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: flex;
       width: 100vw;
       justify-content: center;
@@ -44,7 +44,7 @@ export const StyleMenuNav = () => {
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       &&:hover {
         background-color: #3252a1;
         transition: 0.5s;
@@ -64,7 +64,7 @@ export const StyleMenuNav = () => {
     margin: auto;
     margin-top: 30px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       display: none;
     }
   `;

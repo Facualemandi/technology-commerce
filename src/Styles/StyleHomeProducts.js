@@ -19,7 +19,7 @@ export const StyleHomeProducts = () => {
     margin-left: 10px;
     margin-bottom: 10px;
 
-    @media (min-width: 760px) {
+    @media (min-width: 780px) {
       max-width: 1080px;
       display: flex;
       margin: 20px auto;
