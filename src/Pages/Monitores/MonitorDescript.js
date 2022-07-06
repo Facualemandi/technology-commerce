@@ -5,6 +5,7 @@ import { useAuth } from "../../Context/authContext";
 import Nav from "../../Components/Nav";
 import ModalAddCart from "../../Components/ModalAddCart";
 import Footer from "../../Components/Footer";
+import ButtomReturn from "../../Components/ButtomReturn";
 
 const {
   Img,
@@ -77,7 +78,9 @@ const MonitorDescript = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>
+              Comprar
+            </ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>
@@ -103,6 +106,7 @@ const MonitorDescript = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
+      <ButtomReturn />
       <Footer />
     </>
   );

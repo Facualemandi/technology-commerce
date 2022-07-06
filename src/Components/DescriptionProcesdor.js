@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
 import { StyleProduct } from "../Styles/StyleProduct";
+import ButtomReturn from "./ButtomReturn";
 import Footer from "./Footer";
 import ModalAddCart from "./ModalAddCart";
 import Nav from "./Nav";
@@ -24,7 +25,7 @@ const {
   Minus,
   Amount,
   Add,
-  SectionAmountDesktop
+  SectionAmountDesktop,
 } = StyleProduct();
 
 const UlPlaca = styled.section`
@@ -49,8 +50,14 @@ const Caracteristica = styled.p`
 `;
 
 const DescriptionProcesdor = () => {
-  const { producto, amount, addAmount, deleteAmount, addProductCart, modalAdd, } =
-    useAuth();
+  const {
+    producto,
+    amount,
+    addAmount,
+    deleteAmount,
+    addProductCart,
+    modalAdd,
+  } = useAuth();
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
 
@@ -60,7 +67,7 @@ const DescriptionProcesdor = () => {
     <>
       <Nav />
       {modalAdd && <ModalAddCart />}
-      
+
       <Main>
         <SectionDesktopNotebook>
           <SectionImg>
@@ -72,7 +79,9 @@ const DescriptionProcesdor = () => {
             <Price>${price}</Price>
             <Description>{description}</Description>
 
-            <ButtomDesktop onClick={() => addProductCart(producto, id)}>Comprar</ButtomDesktop>
+            <ButtomDesktop onClick={() => addProductCart(producto, id)}>
+              Comprar
+            </ButtomDesktop>
             <SectionAmountDesktop>
               <Minus onClick={deleteAmount}>Minus</Minus>
               <Amount>{amount}</Amount>
@@ -98,7 +107,8 @@ const DescriptionProcesdor = () => {
           </SectionAmount>
         </SectionButtom>
       </Main>
-      <Footer/>
+      <ButtomReturn />
+      <Footer />
     </>
   );
 };

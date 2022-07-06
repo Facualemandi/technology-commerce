@@ -44,7 +44,7 @@ const Microprocesadores = () => {
         {procesadores.map((product) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Notebook/${product.name}`} key={product.id}>
+              <TheNavLink to={`/Procesador/${product.name}`} key={product.id}>
                 <Section onClick={() => handleProduct(product)}>
                   <SectionImg>
                     <Img alt={product.name} src={product.img} />
