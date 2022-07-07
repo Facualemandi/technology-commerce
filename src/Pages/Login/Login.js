@@ -3,6 +3,7 @@ import imgRegister from "../../Images/Venexcomputacion.png";
 import { FcGoogle } from "react-icons/fc";
 import { useLogin } from "../../Hooks/useLogin";
 import { StyleLogin } from "../../Styles/StyleLogin";
+import styled from "styled-components";
 
 const {
   Main,
@@ -17,6 +18,35 @@ const {
   SectionDesktop,
   LoginParragraph,
 } = StyleLogin();
+
+const Invitado = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 5px;
+  font-weight: bold;
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+`;
+
+const EmailInvitado = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 5px;
+  display: flex;
+  margin: 5px auto;
+`;
+
+const PwInvitado = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 5px auto;
+`;
+
+const Bold = styled.b`
+  margin-right: 5px;
+`;
 
 const Register = () => {
   const {
@@ -63,7 +93,7 @@ const Register = () => {
               bg="white"
               color="black"
               onClick={handleGoogleSign}
-              hover='white'
+              hover="white"
             >
               Ingresar Con Google <FcGoogle />{" "}
             </Buttom>
@@ -71,6 +101,13 @@ const Register = () => {
               No tienes cuenta?{" "}
               <StyleLink to={"/Register"}>Registrarse</StyleLink>
             </NoAccounts>
+            <Invitado>Querés entrar como invitado/a ?</Invitado>
+            <EmailInvitado>
+              <Bold>Email:</Bold> usuarioprueba@gmail.com
+            </EmailInvitado>
+            <PwInvitado>
+              <Bold>Contraseña:</Bold> usuarioprueba
+            </PwInvitado>
           </SectionDesktop>
         </Section>
       </Main>
