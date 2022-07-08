@@ -12,18 +12,18 @@ export const StyleHomeProducts = () => {
     width: 90vw;
     display: flex;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 40px;
     font-weight: bold;
     color: #303030;
     font-size: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 
     @media (min-width: 780px) {
       max-width: 1080px;
       display: flex;
       margin: 20px auto;
-  
+      margin-top: 100px;
     }
   `;
 
@@ -42,6 +42,7 @@ export const StyleHomeProducts = () => {
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
     padding: 10px;
+    margin-bottom: 20px;
     margin-bottom: 20px;
 
     @media (min-width: 670px) {
@@ -86,6 +87,7 @@ export const StyleHomeProducts = () => {
   const TheNavLink = styled(NavLink)`
     text-decoration: none;
     color: black;
+    position: relative;
   `;
 
   const SectionImg = styled.section`

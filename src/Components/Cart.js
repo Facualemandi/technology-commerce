@@ -9,7 +9,6 @@ import ButtomReturn from "./ButtomReturn";
 import { NavLink } from "react-router-dom";
 
 const {
-  Main,
   Parragraph,
   Section,
   SectionContianer,
@@ -22,7 +21,8 @@ const {
 
 const Container = styled.section`
   margin-top: 70px;
-  height: 70vh;
+  height: auto;
+  min-height: 70vh;
 `;
 
 const CarritoVacio = styled.p`
@@ -48,6 +48,16 @@ const CartIcon = styled(BsCartX)`
   width: 35px;
   height: 35px;
   margin-top: 15px;
+`;
+const AmountProduct = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 100%;
+  padding: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(158, 158, 158, 0.635);
 `;
 
 const Cart = () => {
@@ -109,6 +119,7 @@ const Cart = () => {
                   <Price>${note.price}</Price>
                   <NameProduct>{note.name}</NameProduct>
                 </Section>
+                <AmountProduct>x{note.amount}</AmountProduct>
                 <ButtomDelete onClick={(e) => handleDelete(e, note.id)}>
                   Eliminar Producto
                 </ButtomDelete>

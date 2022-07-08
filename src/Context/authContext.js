@@ -44,7 +44,6 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(user)
     });
   }, [user]);
 
@@ -64,10 +63,11 @@ export function AuthProvider({ children }) {
   const addProductCart = (product, id) => {
     if (amount > 0) {
       if (productCart.find((obj) => obj.id === id)) {
-         console.log('Producto ya agrregadao')
-         setAmount(0)
+        console.log("Producto ya agrregadao");
+        setAmount(0);
       } else {
         setProductCart([...productCart, product]);
+        product.amount = amount;
         setModalAdd(true);
         setAmount(0);
         setTimeout(() => {
@@ -76,12 +76,6 @@ export function AuthProvider({ children }) {
       }
     }
   };
-
-  const openModal = () => {};
-
-  useEffect(() => {
-    console.log(productCart);
-  }, [productCart]);
 
   return (
     <authContext.Provider
@@ -99,7 +93,6 @@ export function AuthProvider({ children }) {
         addProductCart,
         productCart,
         setProductCart,
-        openModal,
         modalAdd,
       }}
     >
