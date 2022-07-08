@@ -91,7 +91,6 @@ const Cart = () => {
     }
   `;
 
-  console.log(productCart);
   return (
     <>
       <Nav />
