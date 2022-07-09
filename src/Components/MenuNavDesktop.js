@@ -101,7 +101,7 @@ const MenuNavDesktop = () => {
     <>
       <Section>
         <ContainerUser>
-          {user.displayName && (
+          {/* {user.displayName && (
             <SectionUser>
               <IconUser />
               <NameUser>{user.displayName}</NameUser>
@@ -113,7 +113,7 @@ const MenuNavDesktop = () => {
               <IconUser />
               <NameUser>Bienvenido Usuario!</NameUser>
             </SectionUser>
-          )}
+          )} */}
 
           <Buttom onClick={handleLogOut}>Cerrar Sesion</Buttom>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../Context/authContext";
-import conectividad from "../../Images/IconsSvg/conectividada.png";
+import conectividadImg from "../../Images/IconsSvg/conectividada.png";
 import ssd from "../../Images/IconsSvg/ssd.png";
 import thePantalla from "../../Images/IconsSvg/monitor.png";
 import theRam from "../../Images/IconsSvg/ram.png";
@@ -62,13 +62,8 @@ const Notebook = () => {
     sistema,
     imgdesk,
     id,
+    conectividad,
   } = producto;
-
-  const storage = Object.values(almacenamiento);
-  const screen = Object.values(pantalla);
-  const processor = Object.values(procesador);
-  const memoryRam = Object.values(ram);
-  const sistem = Object.values(sistema);
 
   return (
     <>
@@ -104,27 +99,31 @@ const Notebook = () => {
               <ItemName>Almacenamiento</ItemName>
             </SectionNameItems>
 
-            <Ul>
-              {storage.map((item) => (
-                <Li key={item.id}>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {almacenamiento === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {almacenamiento.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
 
           <SectionItems>
             <SectionNameItems>
-              <ImgSvg alt="SSD" src={conectividad} />
+              <ImgSvg alt="SSD" src={conectividadImg} />
               <ItemName>Conectividad</ItemName>
             </SectionNameItems>
-            <Ul>
-              {storage.map((item) => (
-                <Li>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {conectividad === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {conectividad.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
 
           <SectionItems>
@@ -132,13 +131,15 @@ const Notebook = () => {
               <ImgSvg alt="SSD" src={theRam} />
               <ItemName>Memoria Ram</ItemName>
             </SectionNameItems>
-            <Ul>
-              {memoryRam.map((item) => (
-                <Li>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {ram === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {ram.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
 
           <SectionItems>
@@ -146,13 +147,15 @@ const Notebook = () => {
               <ImgSvg alt="SSD" src={thePantalla} />
               <ItemName>Pantalla</ItemName>
             </SectionNameItems>
-            <Ul>
-              {screen.map((item) => (
-                <Li>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {pantalla === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {pantalla.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
 
           <SectionItems>
@@ -160,13 +163,15 @@ const Notebook = () => {
               <ImgSvg alt="SSD" src={theProcesador} />
               <ItemName>Procesador</ItemName>
             </SectionNameItems>
-            <Ul>
-              {processor.map((item) => (
-                <Li>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {procesador === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {procesador.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
 
           <SectionItems>
@@ -174,13 +179,15 @@ const Notebook = () => {
               <ImgSvg alt="SSD" src={theSistem} />
               <ItemName>Sistema Operativo</ItemName>
             </SectionNameItems>
-            <Ul>
-              {sistem.map((item) => (
-                <Li>
-                  <p>{item}</p>
-                </Li>
-              ))}
-            </Ul>
+            {sistema === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {sistema.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
           </SectionItems>
         </SectionDescription>
 

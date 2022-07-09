@@ -60,9 +60,10 @@ const MonitorDescript = () => {
     modalAdd,
   } = useAuth();
 
-  const { description, name, id, price, imgdesk, especificaciones } = producto;
-  const items = Object.values(especificaciones);
+  const { description, name, id, price, imgdesk, especificaciones, espec } =
+    producto;
 
+    
   return (
     <>
       <Nav />
@@ -92,11 +93,15 @@ const MonitorDescript = () => {
 
         <UlPlaca>
           <Caracteristica>Caracteristicas</Caracteristica>
-          <Ul>
-            {items.map((item) => (
-              <Li>-{item}</Li>
-            ))}
-          </Ul>
+          {espec === undefined ? (
+            <p>No hay especificaciones</p>
+          ) : (
+            <Ul>
+              {espec.map((item) => (
+                <Li>-{item}</Li>
+              ))}
+            </Ul>
+          )}
         </UlPlaca>
         <SectionButtom>
           <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
