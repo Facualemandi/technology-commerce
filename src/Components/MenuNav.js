@@ -43,7 +43,7 @@ const MenuNav = () => {
     <>
       <Section>
         <Ul>
-          {user.displayName && (
+          {/* {user.displayName && (
             <SectionUser>
               <IconUser />
               <NameUser>{user.displayName}</NameUser>
@@ -55,7 +55,7 @@ const MenuNav = () => {
               <IconUser />
               <NameUser>Bienvenido Usuario!</NameUser>
             </SectionUser>
-          )}
+          )} */}
 
           <Nav to={"/Notebooks"}>
             <Li>Notebooks</Li>

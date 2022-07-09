@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
   const [amount, setAmount] = useState(0);
   const [modalAdd, setModalAdd] = useState(false);
 
-  const [getToken, setGetToken] = useState("");
+  const [getToken, setGetToken] = useState([]);
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -44,7 +44,10 @@ export function AuthProvider({ children }) {
       localStorage.setItem("TOKENUSER", user.accessToken);
       const obtenToken = localStorage.getItem("TOKENUSER");
       // console.log(obtenToken);
-      setGetToken(obtenToken)
+      setGetToken([
+        ...getToken,
+        obtenToken
+      ])
     }
     if(!user){
       console.log('Usuario Deslogueado')
@@ -58,6 +61,7 @@ export function AuthProvider({ children }) {
 
   const logAut = () => {
     localStorage.removeItem("TOKENUSER");
+    setGetToken([])
     signOut(auth);
   };
 
