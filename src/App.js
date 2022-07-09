@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Cart from "./Components/Cart";
 import DescriptionPerifericos from "./Components/DescriptionPerifericos";
 import DescriptionProcesdor from "./Components/DescriptionProcesdor";
+import { ProtectRoute } from "./Components/ProtectRoute";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AuthProvider } from "./Context/authContext";
 import Home from "./Pages/Home/Home";
@@ -23,7 +24,16 @@ function App() {
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/Home" element={<Home />} />
+
+            <Route
+              path="/Home"
+              element={
+                <ProtectRoute>
+                  <Home />
+                </ProtectRoute>
+              }
+            />
+
             <Route path="/Register" element={<Register />} />
             <Route path="/Notebook/:name" element={<Notebook />} />
             <Route path="/PlacaDeVideo/:name" element={<PlacaDeVideo />} />
@@ -33,9 +43,15 @@ function App() {
             <Route path="/PlacasDeVideo" element={<TotalPlacas />} />
             <Route path="/Monitores" element={<TotalMonitores />} />
             <Route path="/Procesadores" element={<Microprocesadores />} />
-            <Route path="/Procesador/:name" element={<DescriptionProcesdor/>}/>
+            <Route
+              path="/Procesador/:name"
+              element={<DescriptionProcesdor />}
+            />
             <Route path="/Perifericos" element={<Perifericos />} />
-            <Route path="/DescriptionPerifericos/:name" element={<DescriptionPerifericos/>} />
+            <Route
+              path="/DescriptionPerifericos/:name"
+              element={<DescriptionPerifericos />}
+            />
           </Routes>
         </ScrollToTop>
       </AuthProvider>

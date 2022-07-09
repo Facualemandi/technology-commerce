@@ -1,15 +1,23 @@
-// import React from "react";
-// import { Navigate } from "react-router-dom";
-// import { useAuth } from "../Context/authContext";
+import { async } from "@firebase/util";
+import React, { useEffect } from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../Context/authContext";
 
-// export const ProtectRoute = ({ children }) => {
-//   const { user, getToken } = useAuth();
+export const ProtectRoute = ({ children }) => {
+  const { user } = useAuth();
 
-//   console.log(getToken);
+  useEffect(() => {
+    async function getUser() {
+      const data = await user;
+      console.log(data);
+      if (!data) return <Navigate to={"/"} />;
+    }
+    getUser();
+  }, [user]);
 
-//   !getToken ? <Navigate to={"/"} /> : <Navigate to={"/Home"} />;
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
-//   // if (getToken) return <Navigate to={"/Home"} />;
-
-//   return <>{children}</>;
-// };
+  return <>{children}</>;
+};

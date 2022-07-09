@@ -55,9 +55,6 @@ export function AuthProvider({ children }) {
     console.log(user);
   }, [user]);
 
-  useEffect(() => {
-    // console.log(getToken);
-  }, [getToken]);
 
   const logAut = () => {
     localStorage.removeItem("TOKENUSER");
