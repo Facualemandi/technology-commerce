@@ -7,7 +7,11 @@ import ProductsHome from "../../Components/ProductsHome";
 import { ProtectRoute } from "../../Components/ProtectRoute";
 import Footer from "../../Components/Footer";
 
+
 const Home = () => {
+  
+
+
   return (
     <>
       <ProtectRoute>

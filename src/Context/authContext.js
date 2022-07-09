@@ -24,6 +24,8 @@ export function AuthProvider({ children }) {
   const [amount, setAmount] = useState(0);
   const [modalAdd, setModalAdd] = useState(false);
 
+  const [getToken, setGetToken] = useState("");
+
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
   };
@@ -37,7 +39,25 @@ export function AuthProvider({ children }) {
     await signInWithPopup(auth, googleProvider);
   };
 
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("TOKENUSER", user.accessToken);
+      const obtenToken = localStorage.getItem("TOKENUSER");
+      // console.log(obtenToken);
+      setGetToken(obtenToken)
+    }
+    if(!user){
+      console.log('Usuario Deslogueado')
+    }
+    console.log(user);
+  }, [user]);
+
+  useEffect(() => {
+    // console.log(getToken);
+  }, [getToken]);
+
   const logAut = () => {
+    localStorage.removeItem("TOKENUSER");
     signOut(auth);
   };
 
@@ -63,7 +83,7 @@ export function AuthProvider({ children }) {
   const addProductCart = (product, id) => {
     if (amount > 0) {
       if (productCart.find((obj) => obj.id === id)) {
-        console.log("Producto ya agrregadao");
+        // console.log("Producto ya agrregadao");
         setAmount(0);
       } else {
         setProductCart([...productCart, product]);
@@ -94,6 +114,7 @@ export function AuthProvider({ children }) {
         productCart,
         setProductCart,
         modalAdd,
+        getToken
       }}
     >
       {children}
