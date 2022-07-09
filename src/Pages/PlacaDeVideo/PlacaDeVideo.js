@@ -62,8 +62,6 @@ const PlacaDeVideo = () => {
 
   const { description, name, price, imgdesk, especificaciones, id } = producto;
 
-  const items = Object.values(especificaciones);
-
   return (
     <>
       <Nav />
@@ -93,11 +91,15 @@ const PlacaDeVideo = () => {
 
         <UlPlaca>
           <Caracteristica>Caracteristicas</Caracteristica>
-          <Ul>
-            {items.map((item) => (
-              <Li>-{item}</Li>
-            ))}
-          </Ul>
+          {especificaciones === undefined ? (
+              <p>No hay especificaciones</p>
+            ) : (
+              <Ul>
+                {especificaciones.map((item) => (
+                  <Li>-{item}</Li>
+                ))}
+              </Ul>
+            )}
         </UlPlaca>
         <SectionButtom>
           <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
