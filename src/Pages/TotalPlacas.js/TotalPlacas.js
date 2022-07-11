@@ -70,7 +70,7 @@ const TotalPlacas = () => {
         <ButtomReturn />
       </NavLink>
 
-      <Footer />
+      {!loaging && <Footer />}
     </>
   );
 };
