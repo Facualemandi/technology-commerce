@@ -216,6 +216,7 @@ export const StyleProduct = () => {
     @media (min-width: 780px) {
       width: 95vw;
       margin: auto;
+      margin-top: 100px;
       display: flex;
     }
 
