@@ -102,8 +102,9 @@ const Redes = styled.p`
 
 const FooterDesktop = styled.section`
   @media (min-width: 780px) {
-    width: 60vw;
+    width: 90vw;
     display: flex;
+    max-width: 1080px;
     margin: auto;
   }
 `;
