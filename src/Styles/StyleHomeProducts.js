@@ -45,8 +45,9 @@ export const StyleHomeProducts = () => {
     margin-bottom: 20px;
     margin-bottom: 20px;
 
-    @media (min-width: 670px) {
-      grid-template-columns: repeat(3, 200px);
+    @media (min-width: 780px) {
+      grid-template-columns: repeat(3, 1fr);
+      width: 100vw;
     }
 
     @media (min-width: 960px) {
