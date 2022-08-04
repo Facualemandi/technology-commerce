@@ -9,15 +9,13 @@ export const ProtectRoute = ({ children }) => {
   useEffect(() => {
     async function getUser() {
       const data = await user;
-      console.log(data);
+
       if (!data) return <Navigate to={"/"} />;
     }
     getUser();
   }, [user]);
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  useEffect(() => {}, [user]);
 
   return <>{children}</>;
 };

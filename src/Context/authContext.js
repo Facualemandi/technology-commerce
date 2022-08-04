@@ -43,16 +43,15 @@ export function AuthProvider({ children }) {
     if (user) {
       localStorage.setItem("TOKENUSER", user.accessToken);
       const obtenToken = localStorage.getItem("TOKENUSER");
-      // console.log(obtenToken);
       setGetToken([
         ...getToken,
         obtenToken
       ])
     }
     if(!user){
-      console.log('Usuario Deslogueado')
+    
     }
-    console.log(user);
+
   }, [user]);
 
 
@@ -84,7 +83,7 @@ export function AuthProvider({ children }) {
   const addProductCart = (product, id) => {
     if (amount > 0) {
       if (productCart.find((obj) => obj.id === id)) {
-        // console.log("Producto ya agrregadao");
+   
         setAmount(0);
       } else {
         setProductCart([...productCart, product]);
