@@ -5,7 +5,6 @@ import { StyleNav } from "../Styles/StyleNav";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useAuth } from "../Context/authContext";
-import Search from "./Search";
 
 const { NavBar, IconBurger, IconCart } = StyleNav();
 
@@ -32,7 +31,6 @@ const Nav = () => {
   const { productCart } = useAuth();
 
   const openNav = () => {
-    console.log("Nav abierto");
     if (!openMenu) {
       setOpenMenu(true);
     } else {
@@ -46,7 +44,7 @@ const Nav = () => {
         <IconBurger onClick={openNav} />
         {openMenu && <MenuNav openMenu={openMenu} />}
         <MenuNavDesktop />
-        {/* <Search/> */}
+
         <NavSection to="/Cart">
           <AmountProducts>{productCart.length}</AmountProducts>
           <IconCart />

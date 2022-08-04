@@ -23,7 +23,7 @@ const ProductsHome = () => {
     <>
       <Main>
         {loaging && <Loader />}
-        
+
         {!loaging && (
           <>
             <Parragraph>
@@ -32,7 +32,7 @@ const ProductsHome = () => {
             <SectionContianer>
               {notebook.map((note) => (
                 <>
-                  <TheNavLink to={`/Notebook/${note.name}`}>
+                  <TheNavLink key={note.id} to={`/Notebook/${note.name}`}>
                     <Section onClick={() => handleProduct(note)}>
                       <SectionImg>
                         <Img alt={note.name} src={note.img} />
@@ -45,18 +45,22 @@ const ProductsHome = () => {
               ))}
             </SectionContianer>
 
+
             <Parragraph>Mejora el rendimiento de tus juego</Parragraph>
             <SectionContianer>
-              {placas.map((product) => (
+              {placas.map((placas) => (
                 <>
                   {!loaging && (
-                    <TheNavLink to={`/PlacaDeVideo/${product.name}`}>
-                      <Section onClick={() => handleProduct(product)}>
+                    <TheNavLink
+                      key={placas.id}
+                      to={`/PlacaDeVideo/${placas.name}`}
+                    >
+                      <Section onClick={() => handleProduct(placas)}>
                         <SectionImg>
-                          <Img alt={product.name} src={product.img} />
+                          <Img alt={placas.name} src={placas.img} />
                         </SectionImg>
-                        <Price>${product.price}</Price>
-                        <NameProduct>{product.name}</NameProduct>
+                        <Price>${placas.price}</Price>
+                        <NameProduct>{placas.name}</NameProduct>
                       </Section>
                     </TheNavLink>
                   )}
@@ -64,12 +68,16 @@ const ProductsHome = () => {
               ))}
             </SectionContianer>
 
+
             <Parragraph>Resolución al Máximo!</Parragraph>
             <SectionContianer>
               {monitores.map((product) => (
                 <>
                   {!loaging && (
-                    <TheNavLink to={`/Monitor/${product.name}`}>
+                    <TheNavLink
+                      key={product.id}
+                      to={`/Monitor/${product.name}`}
+                    >
                       <Section onClick={() => handleProduct(product)}>
                         <SectionImg>
                           <Img alt={product.name} src={product.img} />

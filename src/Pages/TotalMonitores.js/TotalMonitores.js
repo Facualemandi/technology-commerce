@@ -50,8 +50,8 @@ function TotalMonitores() {
         {allMonitores.map((mon) => (
           <>
             {!loaging && (
-              <TheNavLink to={`/Monitor/${mon.name}`} key={mon.id}>
-                <Section onClick={() => handleProduct(mon)}>
+              <TheNavLink to={`/Monitor/${mon.name}`}>
+                <Section onClick={() => handleProduct(mon)} key={mon.id}>
                   <SectionImg>
                     <Img alt={mon.name} src={mon.img} />
                   </SectionImg>

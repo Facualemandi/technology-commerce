@@ -92,22 +92,23 @@ const PlacaDeVideo = () => {
         <UlPlaca>
           <Caracteristica>Caracteristicas</Caracteristica>
           {especificaciones === undefined ? (
-              <p>No hay especificaciones</p>
-            ) : (
-              <Ul>
-                {especificaciones.map((item) => (
-                  <Li>-{item}</Li>
-                ))}
-              </Ul>
-            )}
+            <p>No hay especificaciones</p>
+          ) : (
+            <Ul>
+              {especificaciones.map((item) => (
+                <Li>-{item}</Li>
+              ))}
+            </Ul>
+          )}
         </UlPlaca>
         <SectionButtom>
-          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
           <SectionAmount>
             <Minus onClick={deleteAmount}>Minus</Minus>
             <Amount>{amount}</Amount>
             <Add onClick={addAmount}>More</Add>
           </SectionAmount>
+
+          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
         </SectionButtom>
       </Main>
 

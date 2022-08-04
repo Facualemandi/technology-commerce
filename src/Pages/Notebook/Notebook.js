@@ -192,12 +192,12 @@ const Notebook = () => {
         </SectionDescription>
 
         <SectionButtom>
-          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
           <SectionAmount>
             <Minus onClick={deleteAmount}>Minus</Minus>
             <Amount>{amount}</Amount>
             <Add onClick={addAmount}>More</Add>
           </SectionAmount>
+          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
         </SectionButtom>
         <Footer />
         <NavLink to={"/Notebooks"}>

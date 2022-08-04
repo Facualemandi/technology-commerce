@@ -59,6 +59,24 @@ const AmountProduct = styled.p`
   padding: 5px;
   box-shadow: 0px 0px 5px 0px rgba(158, 158, 158, 0.635);
 `;
+const ButtomDelete = styled.button`
+border: 1px solid red;
+width: 95%;
+display: flex;
+margin: 10px auto;
+padding: 5px;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+font-family: sans-serif;
+border: none;
+background-color: #ffc2c0;
+font-weight: bold;
+
+@media (min-width: 780px) {
+  cursor: pointer;
+}
+`;
 
 const Cart = () => {
   const { productCart, setProductCart, handleProduct } = useAuth();
@@ -71,25 +89,6 @@ const Cart = () => {
 
     return setProductCart(newObj);
   };
-
-  const ButtomDelete = styled.button`
-    border: 1px solid red;
-    width: 95%;
-    display: flex;
-    margin: 10px auto;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-family: sans-serif;
-    border: none;
-    background-color: #ffc2c0;
-    font-weight: bold;
-
-    @media (min-width: 780px) {
-      cursor: pointer;
-    }
-  `;
 
   return (
     <>
@@ -110,7 +109,7 @@ const Cart = () => {
         <SectionContianer>
           {productCart.map((note) => (
             <>
-              <TheNavLink to={`/Home`}>
+              <TheNavLink to={`/Home`} key={note.id}>
                 <Section onClick={() => handleProduct(note)}>
                   <SectionImg>
                     <Img alt={note.name} src={note.img} />

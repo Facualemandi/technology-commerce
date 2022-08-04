@@ -103,12 +103,12 @@ const MonitorDescript = () => {
           )}
         </UlPlaca>
         <SectionButtom>
-          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
           <SectionAmount>
             <Minus onClick={deleteAmount}>Minus</Minus>
             <Amount>{amount}</Amount>
             <Add onClick={addAmount}>More</Add>
           </SectionAmount>
+          <Buttom onClick={() => addProductCart(producto, id)}>Comprar</Buttom>
         </SectionButtom>
       </Main>
       <NavLink to={"/Monitores"}>
